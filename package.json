@@ -1,13 +1,11 @@
 {
-  "name": "smart_device",
+  "name": "Liga-A-start-template",
   "version": "1.0.0",
-  "description": "Smart Device",
+  "description": "Стартовый шаблон сборки Лиги А",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
-    "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.4.x",
     "gulp": "4.0.x",
     "gulp-csso": "^3.0.1",
     "gulp-imagemin": "^5.0.3",
@@ -22,12 +20,13 @@
     "pixel-glass": "^1.0.13",
     "posthtml-include": "^1.2.0",
     "stylelint": "9.10.x",
-    "stylelint-config-htmlacademy": "^0.1.4"
+    "stylelint-config-htmlacademy": "0.1.x",
+    "eslint": "4.16.0",
+    "eslint-config-htmlacademy": "0.4.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
-    "eslint": "eslint \"source/js/",
     "test": "npm run editorconfig && npm run stylelint && eslint source/js/",
     "build": "gulp build",
     "start": "gulp start",
@@ -51,6 +50,7 @@
     "node": "8.15"
   },
   "dependencies": {
-    "del": "^4.1.1"
+    "del": "^4.1.1",
+    "editorconfig": "^0.15.3"
   }
 }

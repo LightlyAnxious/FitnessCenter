@@ -1,0 +1,54 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin button-reset {
+  padding: 0;
+  border: none;
+  box-sizing: content-box;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+@mixin button-style {
+  display: inline-block;
+  box-sizing: border-box;
+
+  font-family: "Roboto-Condensed", "Helvetica CY", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+@mixin roboto-r {
+  font-family: "RobotoCondensed", "Helvetica CY", sans-serif;
+  font-weight: normal;
+}
+
+@mixin roboto-b {
+  font-family: "RobotoCondensed", "Helvetica CY", sans-serif;
+  font-weight: bold;
+}
+
+@mixin roboto-l {
+  font-family: "RobotoCondensed", "Helvetica CY", sans-serif;
+  font-weight: lighter;
+}
+
+@mixin bebas-r {
+  font-family: "BebasNeue", "Tahoma", sans-serif;
+  font-weight: normal;
+}
+
+@mixin bebas-b {
+  font-family: "BebasNeue-Bold", "Tahoma", sans-serif;
+  font-weight: bold;
+}
