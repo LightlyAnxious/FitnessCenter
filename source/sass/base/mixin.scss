@@ -17,7 +17,7 @@
   display: inline-block;
   box-sizing: border-box;
 
-  font-family: "Roboto-Condensed", "Helvetica CY", sans-serif;
+  font-family: "RobotoCondensed-Bold", "Helvetica CY", sans-serif;
   font-weight: bold;
   font-size: 12px;
   line-height: 14px;
@@ -34,7 +34,7 @@
 }
 
 @mixin roboto-b {
-  font-family: "RobotoCondensed", "Helvetica CY", sans-serif;
+  font-family: "RobotoCondensed-Bold", "Helvetica CY", sans-serif;
   font-weight: bold;
 }
 

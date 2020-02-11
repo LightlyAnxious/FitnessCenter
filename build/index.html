@@ -10,6 +10,8 @@
   <link rel="stylesheet preload" href="css/style.css" as="style">
   <link rel="preload" href="fonts/RobotoCondensed.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/RobotoCondensed.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/RobotoCondensed-Bold.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/BebasNeue-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/BebasNeue-Regular.woff" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/BebasNeue-Bold.woff2" as="font" crossorigin="anonymous">
@@ -19,8 +21,14 @@
   <header class="page-header">
     <div class="page-header__wrapper">
       <nav class="page-header__nav">
-        <svg class="page-header__logo">
+        <svg class="page-header__logo page-header__logo--desktop">
           <use xlink:href="img/sprite_auto.svg#logo"></use>
+        </svg>
+        <svg class="page-header__logo page-header__logo--tablet">
+          <use xlink:href="img/sprite_auto.svg#logo_tablet"></use>
+        </svg>
+        <svg class="page-header__logo page-header__logo--mobile">
+          <use xlink:href="img/sprite_auto.svg#logo_mobile"></use>
         </svg>
         <a href="tel:8-800-555-55-55" aria-label="позвоните нам">8-800-555-55-55</a>
       </nav>
@@ -35,6 +43,11 @@
           <b>омск</b>
           <strong>Фитнес центр</strong>
           <a href="#membership">Купить абонемент</a>
+        </div>
+        <div class="page-header__socials">
+          <a href="#">fb</a>
+          <a href="#">vk</a>
+          <a href="#">ig</a>
         </div>
       </section>
     </div>
