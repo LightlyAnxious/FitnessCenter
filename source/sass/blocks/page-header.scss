@@ -82,6 +82,11 @@
 
       opacity: 0.3;
     }
+
+    &:focus {
+      outline: 5px solid #2aa4f4;
+      outline-offset: 3px;
+    }
   }
 }
 
@@ -182,6 +187,11 @@
 
       opacity: 0.3;
     }
+
+    &:focus {
+      outline: 5px solid #2aa4f4;
+      outline-offset: 3px;
+    }
   }
 }
 
@@ -212,6 +222,11 @@
 
       opacity: 0.3;
     }
+
+    &:focus {
+      outline: 5px solid #2aa4f4;
+      outline-offset: 3px;
+    }
   }
 }
 
@@ -231,7 +246,7 @@
   .webp .page-header__wrapper {
     background-image: url("../img/header_promo_tablet.webp");
     background-repeat: no-repeat;
-    background-position: 96% 82px;
+    background-position: 371px 82px;
     background-size: 324px 390px;
     background-color: transparent;
   }
@@ -239,7 +254,7 @@
   .no-webp .page-header__wrapper {
     background-image: url("../img/header_promo_tablet.jpg");
     background-repeat: no-repeat;
-    background-position: 96% 82px;
+    background-position: 371px 82px;
     background-size: 324px 390px;
     background-color: transparent;
   }
@@ -248,7 +263,7 @@
     .no-webp .page-header__wrapper {
       background-image: url("../img/header_promo_tablet_2x.jpg");
       background-repeat: no-repeat;
-      background-position: 96% 82px;
+      background-position: 371px 82px;
       background-size: 324px 390px;
       background-color: transparent;
     }
@@ -256,7 +271,7 @@
     .webp .page-header__wrapper {
       background-image: url("../img/header_promo_tablet_2x.webp");
       background-repeat: no-repeat;
-      background-position: 96% 82px;
+      background-position: 371px 82px;
       background-size: 324px 390px;
       background-color: transparent;
     }
@@ -383,23 +398,29 @@
     }
   }
 
+  .page-header__promo {
+    justify-content: center;
+  }
+
   .page-header__features {
     margin-top: 174px;
     margin-bottom: 62px;
   }
 
   .page-header__membership {
-    margin: -295px 0 0 0;
+    width: 290px;
+    margin: 0 0 0 -113px;
 
     & b {
-      margin-bottom: 14px;
+      width: 100%;
+      margin: 55px 0 14px 0;
 
       font-size: 28px;
       line-height: 28px;
     }
 
     & strong {
-      margin-bottom: 38px;
+      margin-bottom: 37px;
 
       font-size: 78px;
       line-height: 78px;
@@ -407,7 +428,7 @@
     }
 
     & a {
-      padding: 21px 83px;
+      padding: 20px 82px 20px 83px;
       margin: 0 0 40px 0;
     }
   }
