@@ -64,11 +64,65 @@
       </div>
       <div class="about__video">
         <video src="#" width="364" height="228"></video>
-        <!-- <video src="#" width="364" height="228" poster="img/about_video--tablet.jpg"></video>
-        <video src="#" width="364" height="228" poster="img/about_video--mobile.jpg"></video> -->
         <button></button>
       </div>
     </section>
+    <section class="features">
+      <h2>Абонементы</h2>
+      <div class="features__wrapper">
+        <div class="features__options">
+          <fieldset>
+            <ul class="features__controls">
+              <li>
+                <input type="radio" id="radio-1" class="visually-hidden" name="selector" value="1-month" tabindex="-1" checked="">
+                <label for="radio-1" class="features__toggle" tabindex="0" aria-label="Выбрать абонемент на 1 месяц">1 месяц</label>
+              </li>
+              <li>
+                <input type="radio" id="radio-6" class="visually-hidden" name="selector" value="6-month" tabindex="-1">
+                <label for="radio-6" class="features__toggle" tabindex="0" aria-label="Выбрать абонемент на 6 месяцев">6 месяцев</label>
+              </li>
+              <li>
+                <input type="radio" id="radio-12" class="visually-hidden" name="selector" value="12-month" tabindex="-1">
+                <label for="radio-12" class="features__toggle" tabindex="0" aria-label="Выбрать абонемент на 12 месяцев">12 месяцев</label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="features__progress">
+            <span class="features__bar">
+              <span class="features__range">
+              </span>
+            </span>
+          </div>
+        </div>
+        <ul class="features__list">
+          <li class="features__item" tabindex="0" aria-label="Тариф 'С Тренером'">
+            <h3>С тренером</h3>
+            <p>12 занятий</p>
+            <b>5000</b>
+            <strong>5000</strong>
+            <a href="#">Купить абонемент</a>
+          </li>
+          <li class="features__item" tabindex="0" aria-label="Тариф 'Дневной'">
+            <h3>Дневной</h3>
+            <p>с 8:00 до 17:00</p>
+            <b>1700</b>
+            <strong>1700</strong>
+            <a href="#">Купить абонемент</a>
+          </li>
+          <li class="features__item" tabindex="0" aria-label="Тариф 'Полный день'">
+            <h3>Полный день</h3>
+            <p>с 8:00 до 22:00</p>
+            <b>2700</b>
+            <strong>2700</strong>
+            <a href="#">Купить абонемент</a>
+          </li>
+        </ul>
+      </div>
+      <span class="features__image"></span>
+    </section>
+    <article class="competition">
+      <div class="competition__wrapper"></div>
+    </article>
   </main>
 </body>
 </html>
