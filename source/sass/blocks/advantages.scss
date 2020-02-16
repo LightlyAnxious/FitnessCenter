@@ -1,0 +1,167 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 96%;
+  max-width: 1160px;
+  padding: 0 2%;
+  margin: 0 auto;
+
+  background-color: #ffffff;
+
+  & h2 {
+    @include bebas-r;
+
+    margin: 115px 0 60px 0;
+
+    font-size: 49px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+  }
+}
+
+.advantages__wrapper {
+  width: 89.65%;
+}
+
+.advantages__item {
+  width: 33.4%;
+  min-height: 163px;
+  box-sizing: border-box;
+
+  &--space {
+    float: left;
+    position: relative;
+
+    margin-right: 54px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+
+      width: 340px;
+      height: 2px;
+
+      background-color: rgba(209, 10, 66, 0.2);
+    }
+  }
+
+  &--parking {
+    float: right;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+
+      width: 340px;
+      height: 2px;
+
+      background-color: rgba(209, 10, 66, 0.2);
+    }
+  }
+
+  &--comfort {
+    float: left;
+  }
+
+  &--experience {
+    float: right;
+  }
+
+  &--space .advantages__desc {
+    width: 180px;
+  }
+
+  &--parking .advantages__desc {
+    width: 232px;
+  }
+
+  &--gym {
+    clear: both;
+
+    display: inline-block;
+    width: 23.05%;
+    min-height: 240px;
+
+    background-color: $dark-blue;
+
+    color: #ffffff;
+  }
+}
+
+.advantages__statistics {
+  display: inline-block;
+  margin-bottom: 10px;
+
+  vertical-align: top;
+
+  background: linear-gradient(140deg, #d10a42 5%, #0041ca 45%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &--space {
+    width: 106px;
+    margin: 0 8%;
+  }
+
+  &--parking {
+    width: 72px;
+    margin-left: 8px;
+    margin-right: 7.78%;
+  }
+
+  &--gym {
+    background: unset;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+
+    & strong {
+      margin: 60px 65px 20px 60px;
+
+      font-size: 74px;
+      line-height: 150%;
+      color: #ffffff;
+    }
+  }
+
+  & strong {
+    @include roboto-b;
+
+    font-size: 71px;
+    line-height: 92%;
+  }
+
+  & span {
+    font-size: 14px;
+    line-height: 150%;
+  }
+}
+
+.advantages__desc {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  & h3 {
+    @include roboto-b;
+
+    margin: 0 0 6px 0;
+
+    font-size: 22px;
+    line-height: 150%;
+  }
+
+  & p {
+    @include roboto-l;
+
+    margin: 0 0 6px 0;
+
+    font-size: 16px;
+    line-height: 140%;
+  }
+}

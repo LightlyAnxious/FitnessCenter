@@ -1,0 +1,173 @@
+.slider__btn {
+  @include button-reset;
+
+  position: relative;
+
+  width: 16px;
+  height: 32px;
+
+  transform: translateZ(0);
+
+  cursor: pointer;
+
+  &--prev {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 8px;
+      left: -3px;
+
+      width: 22px;
+      height: 1px;
+
+      background-color: #afafaf;
+
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 23px;
+      left: -3px;
+
+      width: 22px;
+      height: 1px;
+
+      background-color: #afafaf;
+
+      transform: rotate(45deg);
+    }
+
+    &:hover::before {
+      background-color: $dark-navy;
+    }
+
+    &:hover::after {
+      background-color: $dark-navy;
+    }
+
+    &:active::before {
+      background-color: $dark-navy;
+
+      opacity: 0.2;
+    }
+
+    &:active::after {
+      background-color: $dark-navy;
+
+      opacity: 0.2;
+    }
+  }
+
+  &--next {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 8px;
+      left: -3px;
+
+      width: 22px;
+      height: 1px;
+
+      background-color: #afafaf;
+
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 23px;
+      left: -3px;
+
+      width: 22px;
+      height: 1px;
+
+      background-color: #afafaf;
+
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before {
+      background-color: $dark-navy;
+    }
+
+    &:hover::after {
+      background-color: $dark-navy;
+    }
+
+    &:active::before {
+      background-color: $dark-navy;
+
+      opacity: 0.2;
+    }
+
+    &:active::after {
+      background-color: $dark-navy;
+
+      opacity: 0.2;
+    }
+  }
+
+  &:focus {
+    outline: 5px solid #2aa4f4;
+    outline-offset: 3px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .slider__btn {
+    width: 10px;
+    height: 19px;
+
+    &--prev {
+      &::before {
+        position: absolute;
+        content: "";
+        top: 5px;
+        left: -1px;
+
+        width: 14px;
+        height: 1px;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        left: -1px;
+
+        width: 14px;
+        height: 1px;
+      }
+    }
+
+    &--next {
+      &::before {
+        position: absolute;
+        content: "";
+        top: 5px;
+        left: -1px;
+
+        width: 14px;
+        height: 1px;
+      }
+
+      &::after {
+        position: absolute;
+        content: "";
+        top: 14px;
+        left: -1px;
+
+        width: 14px;
+        height: 1px;
+      }
+    }
+
+    &:focus {
+      outline: 5px solid #2aa4f4;
+      outline-offset: 3px;
+    }
+  }
+}
