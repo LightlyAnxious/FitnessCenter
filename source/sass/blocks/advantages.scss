@@ -4,10 +4,11 @@
   align-items: center;
   width: 96%;
   max-width: 1160px;
+  min-height: 755px;
   padding: 0 2%;
   margin: 0 auto;
 
-  background-color: #ffffff;
+  background-color: #f8f9fc;
 
   & h2 {
     @include bebas-r;
@@ -21,16 +22,17 @@
 }
 
 .advantages__wrapper {
+  // display: flex;
   width: 89.65%;
 }
 
 .advantages__item {
+  display: inline-block;
   width: 33.4%;
   min-height: 163px;
   box-sizing: border-box;
 
   &--space {
-    float: left;
     position: relative;
 
     margin-right: 54px;
@@ -49,7 +51,6 @@
   }
 
   &--parking {
-    float: right;
     position: relative;
 
     &::before {
@@ -65,13 +66,11 @@
     }
   }
 
-  &--comfort {
-    float: left;
-  }
+  // &--comfort {
+  // }
 
-  &--experience {
-    float: right;
-  }
+  // &--experience {
+  // }
 
   &--space .advantages__desc {
     width: 180px;
@@ -82,11 +81,11 @@
   }
 
   &--gym {
-    clear: both;
+    // display: table-cell;
 
-    display: inline-block;
+    display: inline-table;
     width: 23.05%;
-    min-height: 240px;
+    min-height: 307px;
 
     background-color: $dark-blue;
 

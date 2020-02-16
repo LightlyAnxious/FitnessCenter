@@ -1,61 +1,54 @@
 var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-var sliderPrev = document.querySelector('.slider__btn--prev');
-var sliderNext = document.querySelector('.slider__btn--next');
+var prevTrainer = document.querySelector('.trainers__prev');
+var nextTrainer = document.querySelector('.trainers__next');
+var prevReview = document.querySelector('.reviews__btn--prev')
+var nextReview = document.querySelector('.reviews__btn--next')
 
 // Объявление слайдера
 
-var prevRemote = function (i) {
-  mySiema.prev(i);
-  return mySiema;
-}
-
-var nextRemote = function (i) {
-  mySiema.next(i);
-  return mySiema;
-}
-
 if (viewportWidth > 1200) {
-  const mySiema = new Siema({
+  const trainersSlider = new Siema({
     selector: '.trainers__list',
     perPage: 4,
     startIndex: 0,
   });
 
-  sliderPrev.addEventListener('click', () => mySiema.prev(4));
-  sliderNext.addEventListener('click', () => mySiema.next(4));
+  prevTrainer.addEventListener('click', () => trainersSlider.prev(4));
+  nextTrainer.addEventListener('click', () => trainersSlider.next(4));
 } else if (viewportWidth >= 768 && viewportWidth <= 1200) {
-  const mySiema = new Siema({
+  const trainersSlider = new Siema({
     selector: '.trainers__list',
     perPage: 2,
     startIndex: 2,
   });
 
-  sliderPrev.addEventListener('click', () => mySiema.prev(2));
-  sliderNext.addEventListener('click', () => mySiema.next(2));
+  prevTrainer.addEventListener('click', () => trainersSlider.prev(2));
+  nextTrainer.addEventListener('click', () => trainersSlider.next(2));
 } else {
-  const mySiema = new Siema({
+  const trainersSlider = new Siema({
     selector: '.trainers__list',
     perPage: 1,
     startIndex: 2,
   });
 
-  sliderPrev.addEventListener('click', () => mySiema.prev(1));
-  sliderNext.addEventListener('click', () => mySiema.next(1));
+  prevTrainer.addEventListener('click', () => trainersSlider.prev(1));
+  nextTrainer.addEventListener('click', () => trainersSlider.next(1));
 }
 
-// // gradient polyfill
+const reviewSlider = new Siema({
+  selector: '.reviews__list',
+  perPage: 1,
+  startIndex: 0,
+});
 
-// var element = document.querySelector('.headline');
+prevReview.addEventListener('click', () => reviewSlider.prev(1));
+nextReview.addEventListener('click', () => reviewSlider.next(1));
 
-// /*
-// * Call the polyfill
-// *
-// * patternID : the unique ID of the SVG pattern
-// * patternURL : the URL to the background-image
-// * class : the css-class applied to the SVG
-// */
-// element.backgroundClipPolyfill({
-//   'patternID' : 'mypattern',
-//   'patternURL' : 'http://timpietrusky.com/cdn/army.png',
-//   'class' : 'headline'
-// });
+// Удаление дубликата изображений если браузер не IE
+var reviewsImages = document.querySelectorAll('.reviews__image');
+var version = detectIE();
+if (version === false) {
+  for (var i = 0; i < reviewsImages.length; i++) {
+    reviewsImages[i].remove();
+  }
+}
