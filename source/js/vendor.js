@@ -42,16 +42,6 @@ function detectIE() {
   return false;
 }
 
-// Удаление дубликата изображений если браузер не IE
-var reviewsImages = document.querySelectorAll('.reviews__image');
-var version = detectIE();
-if (version === false) {
-  for (var i = 0; i < reviewsImages.length; i++) {
-    reviewsImages[i].remove();
-  }
-}
-
-
 // gradient text polyfill
 if (detectIE()) {
   ;(function(){

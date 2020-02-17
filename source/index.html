@@ -413,10 +413,13 @@
         <ul class="reviews__list">
           <li class="reviews__item">
             <picture>
+              <source media="(max-width: 767px)" type="image/webp" srcset="img/review_1_mobile.webp 1x, img/review_1_mobile_2x.webp 2x">
               <source type="image/webp" srcset="img/review_1.webp 1x, img/review_1_2x.webp 2x">
               <img src="img/review_1.png" srcset="img/review_1_2x.png 2x" alt="Отзыв посетителя">
             </picture>
             <img class="reviews__image" src="img/review_1.png" srcset="img/review_1_2x.png 2x" alt="Отзыв посетителя">
+            <img class="reviews__image reviews__image--mobile" src="img/review_1_mobile.png" srcset="img/review_1_mobile_2x.png 2x" alt="Отзыв посетителя">
+            <h3>Анна Орлова</h3>
             <blockquote>
               <cite>Анна Орлова</cite>
               <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
@@ -424,10 +427,13 @@
           </li>
           <li class="reviews__item">
             <picture>
+              <source media="(max-width: 767px)" type="image/webp" srcset="img/review_1_mobile.webp 1x, img/review_1_mobile_2x.webp 2x">
               <source type="image/webp" srcset="img/review_1.webp 1x, img/review_1_2x.webp 2x">
               <img src="img/review_1.png" srcset="img/review_1_2x.png 2x" alt="Отзыв посетителя">
             </picture>
             <img class="reviews__image" src="img/review_1.png" srcset="img/review_1_2x.png 2x" alt="Отзыв посетителя">
+            <img class="reviews__image reviews__image--mobile" src="img/review_1_mobile.png" srcset="img/review_1_mobile_2x.png 2x" alt="Отзыв посетителя">
+            <h3>Анна Орлова</h3>
             <blockquote>
               <cite>Анна Орлова</cite>
               <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
@@ -437,7 +443,100 @@
         <button class="reviews__btn reviews__btn--next slider__btn slider__btn--next"></button>
       </div>
     </section>
+    <section class="feedback">
+      <h2 class="visually-hidden">Свяжитесь с нами</h2>
+      <form action="">
+        <div class="feedback__form">
+          <h3>Бесплатное занятие</h3>
+          <div class="feedback__inputs">
+            <input type="text" name="user-name" placeholder="Имя" id="user-name" required>
+            <input type="tel" name="user-phone" placeholder="Телефон" id="user-phone" required>
+          </div>
+          <button class="feedback__button" type="submit">Отправить</button>
+        </div>
+      </form>
+      <div class="feedback__contacts">
+        <div class="feedback__wrapper">
+          <h3>Контакты</h3>
+          <ul class="feedback__list">
+            <li class="feedback__item feedback__item--address">
+              <h4>Адрес:</h4>
+              <p>г. Омск, ул. 60 лет Октября, 7</p>
+            </li>
+            <li class="feedback__item feedback__item--tel">
+              <h4>Телефон:</h4>
+              <p>8-800-555-55-55</p>
+            </li>
+            <li class="feedback__item feedback__item--hours">
+              <h4>График работы:</h4>
+              <p>Пн-Вс: с 8:00 до 22:00</p>
+            </li>
+            <li class="feedback__item feedback__item--mail">
+              <h4>Email:</h4>
+              <p>omsk@supergym.ru</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <svg class="page-footer__logo page-footer__logo--desktop">
+        <use xlink:href="img/sprite_auto.svg#logo"></use>
+      </svg>
+      <svg class="page-footer__logo page-footer__logo--tablet">
+        <use xlink:href="img/sprite_auto.svg#logo_tablet"></use>
+      </svg>
+      <svg class="page-footer__logo page-footer__logo--mobile">
+        <use xlink:href="img/sprite_auto.svg#logo_mobile"></use>
+      </svg>
+      <nav class="page-footer__nav">
+        <ul class="page-footer__list">
+          <li class="page-footer__item"><a href="#">Услуги</a></li>
+          <li class="page-footer__item"><a href="#">Абонементы</a></li>
+          <li class="page-footer__item"><a href="#">Акции</a></li>
+          <li class="page-footer__item"><a href="#">Тренеры</a></li>
+          <li class="page-footer__item"><a href="#">Расписание</a></li>
+        </ul>
+      </nav>
+      <ul class="page-footer__social">
+        <!-- item 1 -->
+        <li>
+          <a href="#" href="#" class="page-footer__link page-footer__link--vk">
+            <svg class="page-footer__icon" width="24" height="13">
+              <use xlink:href="img/sprite_auto.svg#vk_icon"></use>
+            </svg>
+            <svg class="page-footer__icon page-footer__icon--mobile" width="32" height="17">
+              <use xlink:href="img/sprite_auto.svg#vk_icon_mobile"></use>
+            </svg>
+          </a>
+        </li>
+        <!-- item 2 -->
+        <li>
+          <a href="#" href="#" class="page-footer__link page-footer__link--insta">
+            <svg class="page-footer__icon" width="24" height="24">
+              <use xlink:href="img/sprite_auto.svg#insta_icon"></use>
+            </svg>
+            <svg class="page-footer__icon page-footer__icon--mobile" width="27" height="27">
+              <use xlink:href="img/sprite_auto.svg#insta_icon_mobile"></use>
+            </svg>
+          </a>
+        </li>
+        <!-- item3 -->
+        <li>
+          <a href="#" class="page-footer__link page-footer__link--fb">
+            <svg class="page-footer__icon" width="12" height="24">
+              <use xlink:href="img/sprite_auto.svg#fb_icon"></use>
+            </svg>
+            <svg class="page-footer__icon page-footer__icon--mobile" width="14" height="27">
+              <use xlink:href="img/sprite_auto.svg#fb_icon_mobile"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
   <script src="js/vendor.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>

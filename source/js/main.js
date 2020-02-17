@@ -44,9 +44,10 @@ const reviewSlider = new Siema({
 prevReview.addEventListener('click', () => reviewSlider.prev(1));
 nextReview.addEventListener('click', () => reviewSlider.next(1));
 
-// Удаление дубликата изображений если браузер не IE
+// Удаление дубликата изображений
 var reviewsImages = document.querySelectorAll('.reviews__image');
 var version = detectIE();
+//  Проверка браузера и наличия picture
 if (version === false) {
   for (var i = 0; i < reviewsImages.length; i++) {
     reviewsImages[i].remove();
