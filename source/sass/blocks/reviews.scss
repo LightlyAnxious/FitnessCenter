@@ -1,0 +1,185 @@
+.reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 49.34%;
+  max-width: 673px;
+  padding: 0 2%;
+  margin: 0 auto;
+
+  & h2 {
+    @include bebas-r;
+
+    margin: 120px 0 51px 0;
+
+    font-size: 49px;
+    line-height: 49px;
+    letter-spacing: 0.03em;
+  }
+}
+
+.reviews__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+.reviews__list {
+  @include list-reset;
+  @include roboto-r;
+
+  width: 82.96%;
+  display: inline-block;
+  overflow: hidden;
+
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 140%;
+  white-space: nowrap;
+
+  background-color: $dark-blue;
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+}
+
+.reviews__item {
+  display: inline-block;
+  width: 100%;
+  min-height: 242px;
+  white-space: normal;
+
+  & h3 {
+    display: none;
+  }
+
+  & img {
+    display: inline-block;
+    vertical-align: top;
+
+    margin: 62px 24px 100px 62px;
+  }
+
+  & blockquote {
+    display: inline-block;
+    width: 58.92%;
+    margin: 54px 0 10px 0;
+  }
+
+  & cite {
+    @include roboto-b;
+
+    display: block;
+    margin-bottom: 12px;
+
+    font-style: normal;
+    font-size: 20px;
+    line-height: 150%;
+  }
+
+  & p {
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.reviews__image {
+  &--mobile {
+    display: none;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .reviews {
+    width: 88.28%;
+    padding: 0 1%;
+
+    & h2 {
+      margin: 70px 0  40px 0;
+
+      font-size: 42px;
+      line-height: 42px;
+    }
+  }
+
+  .reviews__wrapper {
+    margin-bottom: 100px;
+  }
+
+  .reviews__list {
+    width: 83.69%;
+  }
+
+  .reviews__item {
+    & p {
+      letter-spacing: 0.005em;
+    }
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .reviews {
+    width: 90.625%;
+
+    & h2 {
+      margin: 40px 0  42px 0;
+
+      font-size: 32px;
+      line-height: 32px;
+    }
+  }
+
+  .reviews__wrapper {
+    margin-bottom: 70px;
+  }
+
+  .reviews__list {
+    width: 77.93%;
+  }
+
+  .reviews__item {
+    min-height: 335px;
+
+    & h3 {
+      display: inline-block;
+
+      width: 62px;
+      margin: 48px 16% 25px 0;
+
+      font-size: 20px;
+      line-height: 130%;
+    }
+
+    & img {
+      width: 68px;
+      height: 68px;
+      margin: 40px 6.63% 15px 17.69%;
+    }
+
+    & blockquote {
+      margin: 0 11.06% 25px 11.06%;
+      width: 77.87%;
+
+      text-align: center;
+    }
+
+    & cite {
+      display: none;
+    }
+
+    & p {
+      width: 100%;
+
+      // text-align: center;
+    }
+  }
+
+  .reviews__image {
+    display: none;
+
+    &--mobile {
+      display: inline-block;
+    }
+  }
+}
