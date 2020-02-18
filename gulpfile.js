@@ -21,9 +21,9 @@ gulp.task("css", function () {
     .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(sass())
-    .pipe(postcss([ autoprefixer() ]))
-    // .pipe(csso())
-    // .pipe(rename("style.min.css"))
+    .pipe(postcss([ autoprefixer({grid: "autoplace"}) ]))
+    .pipe(csso())
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(server.stream());

@@ -84,12 +84,6 @@
   }
 }
 
-.reviews__image {
-  &--mobile {
-    display: none;
-  }
-}
-
 @media (max-width: $tablet-width) {
   .reviews {
     width: 88.28%;
@@ -170,16 +164,6 @@
 
     & p {
       width: 100%;
-
-      // text-align: center;
-    }
-  }
-
-  .reviews__image {
-    display: none;
-
-    &--mobile {
-      display: inline-block;
     }
   }
 }
