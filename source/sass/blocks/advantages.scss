@@ -2,10 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 96%;
-  max-width: 1160px;
   min-height: 755px;
-  padding: 0 2%;
   margin: 0 auto;
 
   background-color: #f8f9fc;
@@ -22,25 +19,27 @@
 }
 
 .advantages__wrapper {
-  // display: flex;
+  display: grid;
+  grid-template-columns: 33.2% 5.26% 23.07% 5.26% 33.2%;
+  grid-template-rows: 160px 160px auto;
   width: 89.65%;
+  max-width: 1040px;
 }
 
 .advantages__item {
-  display: inline-block;
-  width: 33.4%;
   min-height: 163px;
   box-sizing: border-box;
 
   &--space {
     position: relative;
 
-    margin-right: 54px;
+    grid-column: 1;
+    grid-row: 1;
 
     &::before {
       position: absolute;
       content: "";
-      bottom: 0;
+      bottom: 2px;
       left: 0;
 
       width: 340px;
@@ -53,10 +52,13 @@
   &--parking {
     position: relative;
 
+    grid-column: 5;
+    grid-row: 1;
+
     &::before {
       position: absolute;
       content: "";
-      bottom: 0;
+      bottom: 2px;
       left: 0;
 
       width: 340px;
@@ -66,11 +68,10 @@
     }
   }
 
-  // &--comfort {
-  // }
-
-  // &--experience {
-  // }
+  &--experience {
+    grid-column: 5;
+    grid-row: 2;
+  }
 
   &--space .advantages__desc {
     width: 180px;
@@ -81,21 +82,33 @@
   }
 
   &--gym {
-    // display: table-cell;
-
-    display: inline-table;
-    width: 23.05%;
+    grid-column: 3;
+    grid-row: 1 / span 2;
     min-height: 307px;
+    align-self: center;
 
     background-color: $dark-blue;
 
     color: #ffffff;
   }
+
+  &--comfort {
+    grid-column: 1;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 46% 54%;
+    grid-template-rows: 50% auto;
+  }
+}
+
+.advantages__inner {
+  align-self: center;
 }
 
 .advantages__statistics {
   display: inline-block;
   margin-bottom: 10px;
+  margin-right: 28px;
 
   vertical-align: top;
 
@@ -103,14 +116,26 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
+  & strong {
+    @include roboto-b;
+
+    font-size: 71px;
+    line-height: 88%;
+  }
+
+  & span {
+    font-size: 14px;
+    line-height: 150%;
+  }
+
   &--space {
     width: 106px;
-    margin: 0 8%;
+    margin-left: 8%;
   }
 
   &--parking {
     width: 72px;
-    margin-left: 8px;
+    margin-left: 7px;
     margin-right: 7.78%;
   }
 
@@ -118,26 +143,34 @@
     background: unset;
     background-clip: unset;
     -webkit-text-fill-color: unset;
+    margin: 49px 53px 37px 53px;
+
+    text-align: center;
 
     & strong {
-      margin: 60px 65px 20px 60px;
+      display: inline-block;
+
 
       font-size: 74px;
-      line-height: 150%;
+      line-height: 114%;
       color: #ffffff;
+    }
+
+    & span {
+      @include roboto-b;
+
+      display: inline-block;
+      font-size: 26px;
+      line-height: 112%;
+      text-transform: capitalize;
     }
   }
 
-  & strong {
-    @include roboto-b;
-
-    font-size: 71px;
-    line-height: 92%;
-  }
-
-  & span {
-    font-size: 14px;
-    line-height: 150%;
+  &--comfort {
+    grid-column: 1;
+    grid-row: 2;
+    width: 109px;
+    margin: 0;
   }
 }
 
@@ -152,7 +185,7 @@
     margin: 0 0 6px 0;
 
     font-size: 22px;
-    line-height: 150%;
+    line-height: 149%;
   }
 
   & p {
@@ -162,5 +195,27 @@
 
     font-size: 16px;
     line-height: 140%;
+  }
+
+  &--gym {
+    & p {
+      @include roboto-r;
+
+      width: 173px;
+      margin: 0 33px 37px 33px;
+
+      line-height: 150%;
+      text-align: center;
+    }
+  }
+
+  &--comfort {
+    grid-column: 2;
+    grid-row: 2;
+    margin-bottom: 20px;
+
+    // & h3 {
+    //   margin-top: -5px;
+    // }
   }
 }

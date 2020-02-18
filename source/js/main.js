@@ -109,16 +109,17 @@ function detectIE() {
 // фоллбэк для градиента
 var osVersion = detectIE();
 
-if ((osVersion = true) && (viewportWidth >= 1200)) {
+if ((osVersion === true) && (viewportWidth >= 1200)) {
   header.style.background = "";
   header.style.backgroundImage = "url('../img/header_bg.jpg')";
   header.style.backgroundSize = "cover";
-} else if ((osVersion = true) && ((viewportWidth < 1200) && (viewportWidth >= 768))) {
+} else if (((osVersion === true) && (viewportWidth < 1200))) {
   header.style.background = "";
   header.style.backgroundImage = "url('../img/header_bg_tablet.jpg')";
   header.style.backgroundSize = "cover";
-} else {
+} else if (((osVersion === true) && (viewportWidth < 768))) {
   header.style.background = "";
   header.style.backgroundImage = "url('../img/header_bg_mobile.jpg')";
   header.style.backgroundSize = "cover";
 }
+
