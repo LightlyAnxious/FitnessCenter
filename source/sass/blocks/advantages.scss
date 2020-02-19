@@ -309,7 +309,7 @@
     }
 
     &--parking {
-      margin-left: 15px;
+      margin-left: auto;
       margin-right: 15px;
     }
 
@@ -317,7 +317,7 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      margin: 40px 0 17px 0;
+      margin: 42px 0 17px 0;
 
       & strong {
         font-size: 74px;
@@ -333,7 +333,7 @@
     }
 
     &--experience {
-      margin: 45px 16px 5px 15px;
+      margin: 45px 16px 5px auto;
       width: 70px;
     }
   }
@@ -358,22 +358,28 @@
       }
     }
 
+    &--parking {
+      margin-right: 1%;
+    }
+
     &--comfort {
       width: 55%;
       margin: 45px 0 5px 0;
     }
 
     &--experience {
-      width: 68.96%;
-      margin: 45px 0 5px 0;
+      width: 232px;
+      margin: 45px 1% 5px 0;
     }
   }
 }
 
 @media (max-width: $mobile-width) {
   .advantages {
+    min-height: unset;
+
     & h2 {
-      margin: 65px auto 45px auto;
+      margin: 72px auto 45px auto;
 
       font-size: 32px;
       line-height: 32px;
@@ -381,25 +387,34 @@
   }
 
   .advantages__wrapper {
-    width: 90.625%;
-    display: block;
-    padding: 0 1%;
-    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0 auto 27px;
   }
 
   .advantages__item {
     flex-direction: column;
     align-items: center;
-    min-height: 215px;
     width: 100%;
+    min-height: unset;
+    margin-bottom: 10px;
+
+    &--parking {
+      order: 1;
+    }
 
     &--gym {
+      order: 2;
       width: 100%;
-      margin: 0;
+      margin: 0 0 43px;
     }
   }
 
   .advantages__statistics {
+    margin-bottom: 10px;
+
     text-align: center;
 
     & strong {
@@ -413,17 +428,16 @@
     }
 
     &--space {
-      margin: 0 0 5px 0;
+      margin: 0 0 7px;
     }
 
     &--parking {
-      margin-left: 0;
-      margin-right: 0;
+      margin: 0 0 7px;
     }
 
     &--gym {
       width: 100%;
-      margin: 40px 0 17px 0;
+      margin: 43px 0 10px;
 
       & strong {
         font-size: 74px;
@@ -435,19 +449,22 @@
     }
 
     &--comfort {
-      margin: 45px 8px 5px 0;
+      margin: 0 0 7px;
     }
 
     &--experience {
-      margin: 45px 16px 5px 15px;
-      width: 70px;
+      margin: 0 0 7px;
     }
   }
 
   .advantages__desc {
+    margin-bottom: 19px;
+
+    text-align: center;
+
     & h3 {
       font-size: 20px;
-      line-height: 130%;
+      line-height: 150%;
       margin: 0;
     }
 
@@ -457,6 +474,8 @@
     }
 
     &--gym {
+      margin-bottom: 15px;
+
       text-align: center;
 
       & p {
@@ -465,13 +484,17 @@
     }
 
     &--comfort {
-      width: 55%;
-      margin: 45px 0 5px 0;
+      width: 187px;
+      margin: 0 0 20px 0;
     }
 
     &--experience {
-      width: 68.96%;
-      margin: 45px 0 5px 0;
+      width: 232px;
+      margin: 0 0 20px;
+    }
+
+    &--parking {
+      margin-bottom: 24px;
     }
   }
 }
