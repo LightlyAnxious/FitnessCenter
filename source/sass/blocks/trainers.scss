@@ -129,7 +129,7 @@
   }
 }
 
-.trainer__image {
+.trainers__image {
   &--tablet {
     display: none;
   }
@@ -221,13 +221,23 @@
   }
 
   .trainers__item {
-    max-width: 268px;
+    max-width: 270px;
     margin-right: 5.3%;
 
     & p {
       bottom: 23px;
 
       transform: translate(-49%, 0);
+    }
+  }
+
+  .trainers__image {
+    &--desktop {
+      display: none;
+    }
+
+    &--tablet {
+      display: block;
     }
   }
 
@@ -273,6 +283,16 @@
       bottom: 23px;
 
       transform: translate(-49%, 0);
+    }
+  }
+
+  .trainers__image {
+    &--tablet {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
     }
   }
 

@@ -125,5 +125,3 @@
   if (phones) {
     new Numbered(phones);
   }
-
-
