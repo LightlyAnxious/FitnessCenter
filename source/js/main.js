@@ -66,20 +66,4 @@
       return reviewSlider.next(1);
     });
   }
-
-  if (osVersion === true ) {
-    if (viewportWidth >= 1200) {
-      header.style.background = "";
-      header.style.backgroundImage = "url('../img/header_bg.jpg')";
-      header.style.backgroundSize = "cover";
-    } else if (viewportWidth < 1200) {
-      header.style.background = "";
-      header.style.backgroundImage = "url('../img/header_bg_tablet.jpg')";
-      header.style.backgroundSize = "cover";
-    } else if (viewportWidth < 768) {
-      header.style.background = "";
-      header.style.backgroundImage = "url('../img/header_bg_mobile.jpg')";
-      header.style.backgroundSize = "cover";
-    }
-  }
 })();

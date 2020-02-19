@@ -1,7 +1,9 @@
 'use strict';
 
   var phones = document.querySelectorAll('input[type=tel]');
+  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
   var osVersion = detectIE();
+  var header = document.querySelector('.page-header');
 
   // svgxuse
 
@@ -120,6 +122,22 @@
 
     // other browser
     return false;
+  }
+
+  if (osVersion = true ) {
+    if (viewportWidth >= 1200) {
+      header.style.background = "";
+      header.style.backgroundImage = "url('../img/header_bg.jpg')";
+      header.style.backgroundSize = "cover";
+    } else if (viewportWidth < 1200) {
+      header.style.background = "";
+      header.style.backgroundImage = "url('../img/header_bg_tablet.jpg')";
+      header.style.backgroundSize = "cover";
+    } else if (viewportWidth < 768) {
+      header.style.background = "";
+      header.style.backgroundImage = "url('../img/header_bg_mobile.jpg')";
+      header.style.backgroundSize = "cover";
+    }
   }
 
   if (phones) {
