@@ -78,13 +78,12 @@
       &:hover {
         color: $dark-blue;
         border-bottom: 1px solid $dark-blue;
-        opacity: 0.5;
       }
 
       &:active {
         color: $dark-blue;
         border-bottom: 1px solid $dark-blue;
-        opacity: 0.2;
+        opacity: 0.5;
       }
 
       &:focus {
@@ -132,14 +131,22 @@
     cursor: pointer;
 
     &:hover {
-      opacity: 0.5;
+      border-bottom: 1px solid $red;
+
+      color: $red;
     }
 
     &:active {
-      opacity: 0.2;
+      border-bottom: 1px solid $red;
+
+      color: $red;
+      opacity: 0.5;
     }
 
     &:focus {
+      border-bottom: 1px solid $red;
+
+      color: $red;
       outline: 5px solid #2aa4f4;
       outline-offset: 3px;
     }
@@ -192,7 +199,7 @@
     justify-content: unset;
 
     & h2 {
-      margin: 100px 0 39px 0;
+      margin: 95px 0 39px 0;
 
       font-size: 42px;
       line-height: 42px;
@@ -267,6 +274,7 @@
     width: 90.625%;
 
     & h2 {
+      margin-top: 68px;
       margin-bottom: 40px;
 
       font-size: 32px;
@@ -306,7 +314,7 @@
       }
 
       & p {
-        width: 65.51%;
+        width: 190px;
         margin-bottom: 30px;
 
         text-align: center;
