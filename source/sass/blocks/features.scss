@@ -252,25 +252,14 @@ input[type="radio"]:checked + .features__toggle {
   width: 287px;
   height: 494px;
 
+  background: center url("../img/weights_bg.png") no-repeat;
+
   transform: translate(-100%, -70%);
 }
 
-.no-webp .features__image {
-  background: center url("../img/weights_bg.png") no-repeat;
-}
-
-.webp .features__image {
-  background: center url("../img/weights_bg.webp") no-repeat;
-}
-
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .no-webp .features__image {
+  .features__image {
     background: center url("../img/weights_bg_2x.png") no-repeat;
-    background-size: 287px 494px;
-  }
-
-  .webp .features__image {
-    background: center url("../img/weights_bg_2x.webp") no-repeat;
     background-size: 287px 494px;
   }
 }
@@ -332,25 +321,14 @@ input[type="radio"]:checked + .features__toggle {
     width: 347px;
     height: 444px;
 
+    background: center url("../img/weights_tablet.png") no-repeat;
+
     transform: translate(-100%, -72%);
   }
 
-  .no-webp .features__image {
-    background: center url("../img/weights_tablet.png") no-repeat;
-  }
-
-  .webp .features__image {
-    background: center url("../img/weights_tablet.webp") no-repeat;
-  }
-
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .no-webp .features__image {
+    .features__image {
       background: center url("../img/weights_tablet_2x.png") no-repeat;
-      background-size: 347px 444px;
-    }
-
-    .webp .features__image {
-      background: center url("../img/weights_tablet_2x.webp") no-repeat;
       background-size: 347px 444px;
     }
   }
