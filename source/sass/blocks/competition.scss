@@ -7,24 +7,13 @@
   margin: 116px auto 117px auto;
 
   color: #ffffff;
-}
 
-.no-webp .competition {
   background: 100% 50% #010245 url("../img/promo_bg.jpg") no-repeat;
 }
 
-.webp .competition {
-  background: 100% 50% #010245 url("../img/promo_bg.webp") no-repeat;
-}
-
 @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-  .no-webp .competition {
+  .competition {
     background: 100% 50% #010245 url("../img/promo_bg_2x.jpg") no-repeat;
-    background-size: 660px 500px;
-  }
-
-  .webp .competition {
-    background: 100% 50% #010245 url("../img/promo_bg_2x.webp") no-repeat;
     background-size: 660px 500px;
   }
 }
@@ -174,24 +163,13 @@
     min-height: 292px;
     margin-top: 99px;
     margin-bottom: 100px;
-  }
 
-  .no-webp .competition {
     background: 98% 50% #010245 url("../img/promo_bg_tablet.jpg") no-repeat;
   }
 
-  .webp .competition {
-    background: 98% 50% #010245 url("../img/promo_bg_tablet.webp") no-repeat;
-  }
-
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-    .no-webp .competition {
+    .competition {
       background: 98% 50% #010245 url("../img/promo_bg_tablet_2x.jpg") no-repeat;
-      background-size: 368px 292px;
-    }
-
-    .webp .competition {
-      background: 98% 50% #010245 url("../img/promo_bg_tablet_2x.webp") no-repeat;
       background-size: 368px 292px;
     }
   }
@@ -284,24 +262,13 @@
     min-height: 584px;
     margin-top: 70px;
     margin-bottom: 70px;
-  }
 
-  .no-webp .competition {
     background: 50% 100% #010245 url("../img/promo_bg_mobile.jpg") no-repeat;
   }
 
-  .webp .competition {
-    background: 50% 100% #010245 url("../img/promo_bg_mobile.webp") no-repeat;
-  }
-
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-    .no-webp .competition {
+    .competition {
       background: 50% 100% #010245 url("../img/promo_bg_mobile_2x.jpg") no-repeat;
-      background-size: auto 292px;
-    }
-
-    .webp .competition {
-      background: 50% 100% #010245 url("../img/promo_bg_mobile_2x.webp") no-repeat;
       background-size: auto 292px;
     }
   }

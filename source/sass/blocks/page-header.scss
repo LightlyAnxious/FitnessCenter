@@ -20,10 +20,6 @@
 
   color: #ffffff;
 
-  background-color: transparent;
-}
-
-.webp .page-header__wrapper {
   background-image: url("../img/header_promo.webp");
   background-repeat: no-repeat;
   background-position: 68% 50px;
@@ -31,25 +27,9 @@
   background-color: transparent;
 }
 
-.no-webp .page-header__wrapper {
-  background-image: url("../img/header_promo.jpg");
-  background-repeat: no-repeat;
-  background-position: 68% 50px;
-  background-size: 500px 556px;
-  background-color: transparent;
-}
-
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .no-webp .page-header__wrapper {
+  .page-header__wrapper {
     background-image: url("../img/header_promo_2x.jpg");
-    background-repeat: no-repeat;
-    background-position: 68% 50px;
-    background-size: 500px 556px;
-    background-color: transparent;
-  }
-
-  .webp .page-header__wrapper {
-    background-image: url("../img/header_promo_2x.webp");
     background-repeat: no-repeat;
     background-position: 68% 50px;
     background-size: 500px 556px;
@@ -265,17 +245,7 @@
     min-height: 432px;
     width: 88.6%;
     padding: 0 2%;
-  }
 
-  .webp .page-header__wrapper {
-    background-image: url("../img/header_promo_tablet.webp");
-    background-repeat: no-repeat;
-    background-position: 96% 82px;
-    background-size: 324px 390px;
-    background-color: transparent;
-  }
-
-  .no-webp .page-header__wrapper {
     background-image: url("../img/header_promo_tablet.jpg");
     background-repeat: no-repeat;
     background-position: 96% 82px;
@@ -284,16 +254,8 @@
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .no-webp .page-header__wrapper {
+    .page-header__wrapper {
       background-image: url("../img/header_promo_tablet_2x.jpg");
-      background-repeat: no-repeat;
-      background-position: 96% 82px;
-      background-size: 324px 390px;
-      background-color: transparent;
-    }
-
-    .webp .page-header__wrapper {
-      background-image: url("../img/header_promo_tablet_2x.webp");
       background-repeat: no-repeat;
       background-position: 96% 82px;
       background-size: 324px 390px;
@@ -392,24 +354,8 @@
 
   .page-header__wrapper {
     width: 92%;
-  }
 
-  .webp .page-header__wrapper {
     background-image: none;
-  }
-
-  .no-webp .page-header__wrapper {
-    background-image: none;
-  }
-
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .no-webp .page-header__wrapper {
-      background-image: none;
-    }
-
-    .webp .page-header__wrapper {
-      background-image: none;
-    }
   }
 
   .page-header__nav {

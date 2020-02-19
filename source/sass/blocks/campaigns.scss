@@ -52,7 +52,7 @@
 
     color: #ffffff;
 
-    background-color: #ff0000;
+    background: 100% 0 #ff0000 url("../img/campaign_bg.jpg") no-repeat;
 
     & p {
       width: 189px;
@@ -153,22 +153,9 @@
   }
 }
 
-.no-webp .campaigns__item--main {
-  background: 100% 0 #ff0000 url("../img/campaign_bg.jpg") no-repeat;
-}
-
-.webp .campaigns__item--main {
-  background: 100% 0 #ff0000 url("../img/campaign_bg.webp") no-repeat;
-}
-
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .no-webp .campaigns__item--main {
+  .campaigns__item--main {
     background: 100% 0 #ff0000 url("../img/campaign_bg_2x.jpg") no-repeat;
-    background-size: 280px 462px;
-  }
-
-  .webp .campaigns__item--main {
-    background: 100% 0 #ff0000 url("../img/campaign_bg_2x.webp") no-repeat;
     background-size: 280px 462px;
   }
 }
@@ -229,6 +216,8 @@
       width: 41.15%;
       padding-right: 58.85%;
       margin-bottom: 30px;
+
+      background: 100% 0 #ff0000 url("../img/campaign_bg_tablet.jpg") no-repeat;
     }
 
     & p {
@@ -248,22 +237,9 @@
     }
   }
 
-  .no-webp .campaigns__item--main {
-    background: 100% 0 #ff0000 url("../img/campaign_bg_tablet.jpg") no-repeat;
-  }
-
-  .webp .campaigns__item--main {
-    background: 100% 0 #ff0000 url("../img/campaign_bg_tablet.webp") no-repeat;
-  }
-
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .no-webp .campaigns__item--main {
+    .campaigns__item--main {
       background: 100% 0 #ff0000 url("../img/campaign_bg_tablet_2x.jpg") no-repeat;
-      background-size: 399px 462px;
-    }
-
-    .webp .campaigns__item--main {
-      background: 100% 0 #ff0000 url("../img/campaign_bg_tablet_2x.webp") no-repeat;
       background-size: 399px 462px;
     }
   }
@@ -309,6 +285,8 @@
       margin-bottom: 30px;
       min-height: 299px;
 
+      background: 50% 100% #ff0000 url("../img/campaign_bg_mobile.jpg") no-repeat;
+
       & h3 {
         text-align: center;
       }
@@ -345,22 +323,9 @@
     }
   }
 
-  .no-webp .campaigns__item--main {
-    background: 50% 100% #ff0000 url("../img/campaign_bg_mobile.jpg") no-repeat;
-  }
-
-  .webp .campaigns__item--main {
-    background: 50% 100% #ff0000 url("../img/campaign_bg_mobile.webp") no-repeat;
-  }
-
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .no-webp .campaigns__item--main {
+    .campaigns__item--main {
       background: 50% 100% #ff0000 url("../img/campaign_bg_mobile_2x.jpg") no-repeat;
-      background-size: 290px 299px;
-    }
-
-    .webp .campaigns__item--main {
-      background: 50% 100% #ff0000 url("../img/campaign_bg_mobile_2x.webp") no-repeat;
       background-size: 290px 299px;
     }
   }
