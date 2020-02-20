@@ -16,13 +16,13 @@
 
 .feedback__form {
   width: 60%;
-  margin: 62px 24.89% 0 103px;
+  margin: 59px 24.89% 0 103px;
 
   & h3 {
-    @include bebas-r;
+    @include bebas-b;
 
     width: 367px;
-    margin: 0 0 33px 0;
+    margin: 0 0 36px 0;
 
     font-size: 49px;
     line-height: 64px;
@@ -148,12 +148,12 @@
 
 .feedback__wrapper {
   width: 67.93%;
-  margin: 70px 23.27% 0 17.57%;
+  margin: 67px 23.27% 0 17.57%;
 
   & h3 {
-    @include bebas-r;
+    @include bebas-b;
 
-    margin: 0 0 39px 0;
+    margin: 0 0 40px 0;
 
     font-size: 49px;
     line-height: 49px;
@@ -239,13 +239,13 @@
 
   .feedback__form {
     width: 61.45%;
-    margin: 71px 21.22% 0 17.31%;
+    margin: 67px 21.22% 0 17.31%;
 
     & h3 {
       @include bebas-r;
 
       width: unset;
-      margin-bottom: 34px;
+      margin-bottom: 38px;
 
       font-size: 42px;
       line-height: 42px;

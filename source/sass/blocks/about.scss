@@ -32,14 +32,15 @@
   margin-right: 18px;
 
   & h2 {
-    @include bebas-r;
+    @include bebas-b;
 
     width: 100%;
-    margin: 169px 0 5px 0;
+    margin: 166px 0 8px 0;
 
     font-size: 49px;
     line-height: 49px;
     letter-spacing: 0.03em;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
   & p {
@@ -54,7 +55,7 @@
 
 .about__desc {
   & p {
-    @include roboto-r;
+    @include roboto-l;
 
     margin: 0 0 9px 0;
 
@@ -177,7 +178,7 @@
     margin: 0 auto;
 
     & h2 {
-      margin: 100px 0 5px 0;
+      margin: 100px 0 7px 0;
 
       text-align: center;
       font-size: 42px;
@@ -185,7 +186,7 @@
     }
 
     & p {
-      margin-bottom: 37px;
+      margin-bottom: 35px;
     }
   }
 

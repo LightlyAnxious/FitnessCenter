@@ -9,10 +9,10 @@
   margin: 0 auto;
 
   & h2 {
-    @include bebas-r;
+    @include bebas-b;
 
     width: 100%;
-    margin: 12px 0 49px 0;
+    margin: 22px 0 52px 0;
 
     text-align: center;
     font-size: 49px;
@@ -186,7 +186,7 @@
     justify-content: unset;
 
     & h2 {
-      margin: 95px 0 39px 0;
+      margin: 95px 0 43px 0;
 
       font-size: 42px;
       line-height: 42px;
@@ -222,6 +222,7 @@
 
     & p {
       letter-spacing: 0.005em;
+      margin-top: 2px;
       margin-bottom: 35px;
 
       & br {

@@ -9,6 +9,16 @@
 }
 
 @font-face {
+  font-family: "RobotoCondensed-Light";
+  src: local("RobotoCondendsed-Light"),
+    url("../fonts/RobotoCondensed-Light.woff2") format("woff2"),
+    url("../fonts/RobotoCondensed-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "RobotoCondensed-Bold";
   src: local("RobotoCondendsed-Bold"),
     url("../fonts/RobotoCondensed-Bold.woff2") format("woff2"),
