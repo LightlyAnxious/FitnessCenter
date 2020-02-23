@@ -88,7 +88,7 @@
     return shutdown2;
   }
 
-  if (featuresTab && featuresScale) {
+  if (featuresTab) {
     featuresTab.addEventListener('click', function () {
       if (featuresTab.checked) {
         getFlex (featuresItems1, featuresItems6, featuresItems12);
@@ -96,7 +96,7 @@
     });
   }
 
-  if (featuresTab6 && featuresScale) {
+  if (featuresTab6) {
     featuresTab6.addEventListener('click', function () {
       if (featuresTab6.checked) {
         getFlex (featuresItems6, featuresItems1, featuresItems12);
@@ -104,7 +104,7 @@
     });
   }
 
-  if (featuresTab12 && featuresScale) {
+  if (featuresTab12) {
     featuresTab12.addEventListener('click', function () {
       if (featuresTab12.checked) {
         getFlex (featuresItems12, featuresItems1, featuresItems6);
