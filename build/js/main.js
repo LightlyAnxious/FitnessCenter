@@ -1,118 +1,118 @@
 (function () {
   'use strict';
 
-  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-  var trainersList = document.querySelector('.trainers__list');
+  var trainersGallery = document.querySelector('.trainers__gallery');
   var reviewsList = document.querySelector('.reviews__list');
-  var prevTrainer = document.querySelector('.trainers__prev');
-  var nextTrainer = document.querySelector('.trainers__next');
-  var prevReview = document.querySelector('.reviews__btn--prev')
-  var nextReview = document.querySelector('.reviews__btn--next')
-
-  // функция удаления элементов Ie
-  if (!('remove' in Element.prototype)) {
-    Element.prototype.remove = function() {
-        if (this.parentNode) {
-            this.parentNode.removeChild(this);
-        }
-    };
-  }
-
-  // debounce
-
-  function debounce(func, wait, immediate) {
-    var timeout;
-    return function() {
-      var context = this, args = arguments;
-      var later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      var callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  };
+  var featuresTab = document.querySelector('#radio-1')
+  var featuresTab6 = document.querySelector('#radio-6')
+  var featuresTab12 = document.querySelector('#radio-12')
+  var featuresItems1 = document.querySelectorAll('.features__item--1');
+  var featuresItems6 = document.querySelectorAll('.features__item--6');
+  var featuresItems12 = document.querySelectorAll('.features__item--12');
+  var featuresScale = document.querySelector('.features__range');
 
   // Объявление слайдера
-  if (trainersList) {
 
-    var trainersSlider4 = new Siema({
-      selector: '.trainers__list',
-      perPage: 4,
-      startIndex: 0
+  if (trainersGallery) {
+    var trainersSlider = new Swiper('.swiper1', {
+      navigation: {
+        nextEl: '.trainers__next',
+        prevEl: '.trainers__prev',
+      },
+      slidesPerView: 1,
+      initialSlide: 2,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+      autoHeight: true,
+      cssWidthAndHeight: true,
+      autoResize: false,
+      visibilityFullFit: true,
+      setWrapperSize: true,
+
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 26,
+          initialSlide: 2,
+          setWrapperSize: false,
+        },
+        1200: {
+          initialSlide: 1,
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          spaceBetween: 40.5,
+          setWrapperSize: false,
+        },
+      },
+
+      debugger: true,
     });
-
-    var trainersSlider2 = new Siema({
-      selector: '.trainers__list',
-      perPage: 2,
-      startIndex: 2
-    });
-
-    var trainersSlider1 = new Siema({
-      selector: '.trainers__list',
-      perPage: 1,
-      startIndex: 2
-    });
-
-    var onWindowResize = debounce(function() {
-      if(trainersSlider4) {
-        trainersSlider4.destroy();
-        trainersSlider4.remove();
-      } else if (trainersSlider2) {
-        trainersSlider2.destroy();
-        trainersSlider2.remove();
-      } else if (trainersSlider1) {
-        trainersSlider1.destroy();
-        trainersSlider1.remove();
-      }
-
-      if (viewportWidth > 1200) {
-        trainersSlider4.init();
-
-        prevTrainer.addEventListener('click', function () {
-          return trainersSlider4.prev(4);
-        });
-        nextTrainer.addEventListener('click', function () {
-          return trainersSlider4.next(4);
-        });
-      } else if (viewportWidth >= 768 && viewportWidth <= 1200) {
-        trainersSlider2.init()
-
-        prevTrainer.addEventListener('click', function () {
-          return trainersSlider2.prev(2);
-        });
-        nextTrainer.addEventListener('click', function () {
-          return trainersSlider2.next(2);
-        });
-      } else {
-        trainersSlider1.init();
-
-        prevTrainer.addEventListener('click', function () {
-          return trainersSlider1.prev(1);
-        });
-        nextTrainer.addEventListener('click', function () {
-          return trainersSlider1.next(1);
-        });
-      }
-    }, 250);
-
-    // window.addEventListener('resize', onWindowResize);
   }
 
-
   if (reviewsList) {
-    var reviewSlider = new Siema({
-      selector: '.reviews__list',
-      perPage: 1,
-      startIndex: 0
+    var reviewssSlider = new Swiper('.swiper2', {
+      navigation: {
+        nextEl: '.reviews__btn--next',
+        prevEl: '.reviews__btn--prev',
+      },
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+      // autoHeight: true,
+      cssWidthAndHeight: true,
+      autoResize: false,
+      visibilityFullFit: true,
+      // setWrapperSize: true,
     });
-    prevReview.addEventListener('click', function () {
-      return reviewSlider.prev(1);
+  }
+
+  var swiper = new Swiper('.swiper3', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.reviews__btn--next',
+      prevEl: '.reviews__btn--prev',
+    },
+  });
+
+  // Переключение абонементов
+  var getFlex = function (items, shutdown1, shutdown2) {
+    for (var i = 0; i < items.length; i++) {
+      items[i].style.display = 'flex';
+      shutdown1[i].style.display = 'none';
+      shutdown2[i].style.display = 'none';
+    }
+
+    return items;
+    return shutdown1;
+    return shutdown2;
+  }
+
+  if (featuresTab && featuresScale) {
+    featuresTab.addEventListener('click', function () {
+      if (featuresTab.checked) {
+        getFlex (featuresItems1, featuresItems6, featuresItems12);
+        featuresScale.style.width = '19%';
+      }
     });
-    nextReview.addEventListener('click', function () {
-      return reviewSlider.next(1);
+  }
+
+  if (featuresTab6 && featuresScale) {
+    featuresTab6.addEventListener('click', function () {
+      if (featuresTab6.checked) {
+        getFlex (featuresItems6, featuresItems1, featuresItems12);
+        featuresScale.style.width = '50%';
+      }
+    });
+  }
+
+  if (featuresTab12 && featuresScale) {
+    featuresTab12.addEventListener('click', function () {
+      if (featuresTab12.checked) {
+        getFlex (featuresItems12, featuresItems1, featuresItems6);
+        featuresScale.style.width = '100%';
+      }
     });
   }
 })();
