@@ -138,7 +138,13 @@
   }
 
   & video {
+    &::-webkit-media-controls {
+      display: none;
+    }
+
     background-color: transparent;
+
+    pointer-events: none;
   }
 }
 

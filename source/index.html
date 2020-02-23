@@ -74,15 +74,15 @@
             <ul class="features__controls">
               <li>
                 <input type="radio" id="radio-1" class="visually-hidden" name="selector" value="1-month" tabindex="-1" checked>
-                <label for="radio-1" class="features__toggle" tabindex="0" aria-label="Выбрать абонемент на 1 месяц">1 месяц</label>
+                <label for="radio-1" id="label-1" class="features__toggle" tabindex="0" aria-label="Выбрать абонемент на 1 месяц">1 месяц</label>
               </li>
               <li>
                 <input type="radio" id="radio-6" class="visually-hidden"  name="selector" value="6-month" tabindex="-1">
-                <label for="radio-6" class="features__toggle" tabindex="0" aria-label="Выбрать абонемент на 6 месяцев">6 месяцев</label>
+                <label for="radio-6" id="label-6" class="features__toggle" tabindex="0" aria-label="Выбрать абонемент на 6 месяцев">6 месяцев</label>
               </li>
               <li>
                 <input type="radio" id="radio-12" class="visually-hidden" name="selector" value="12-month" tabindex="-1">
-                <label for="radio-12" class="features__toggle" tabindex="0" aria-label="Выбрать абонемент на 12 месяцев">12 месяцев</label>
+                <label for="radio-12" id="label-12" class="features__toggle" tabindex="0" aria-label="Выбрать абонемент на 12 месяцев">12 месяцев</label>
               </li>
             </ul>
           </fieldset>
@@ -94,25 +94,70 @@
           </div>
         </div>
         <ul class="features__list">
-          <li class="features__item" tabindex="0" aria-label="Тариф 'С Тренером'">
+
+          <li class="features__item features__item--1" tabindex="0" aria-label="Тариф 'С Тренером'">
             <h3>С тренером</h3>
             <p>12 занятий</p>
             <b>5000</b>
             <strong>5000</strong>
             <a href="#" aria-label="Приобрести абонемент">Купить абонемент</a>
           </li>
-          <li class="features__item" tabindex="0" aria-label="Тариф 'Дневной'">
+          <li class="features__item features__item--1" tabindex="0" aria-label="Тариф 'Полный день'">
+            <h3>Полный день</h3>
+            <p>с 8:00 до 22:00</p>
+            <b>2700</b>
+            <strong>2700</strong>
+            <a href="#" aria-label="Приобрести абонемент">Купить абонемент</a>
+          </li>
+          <li class="features__item features__item--1" tabindex="0" aria-label="Тариф 'Дневной'">
             <h3>Дневной</h3>
             <p>с 8:00 до 17:00</p>
             <b>1700</b>
             <strong>1700</strong>
             <a href="#" aria-label="Приобрести абонемент">Купить абонемент</a>
           </li>
-          <li class="features__item" tabindex="0" aria-label="Тариф 'Полный день'">
+
+          <li class="features__item features__item--6" tabindex="0" aria-label="Тариф 'С Тренером'">
+            <h3>С тренером</h3>
+            <p>72 занятия</p>
+            <b>27000</b>
+            <strong>27000</strong>
+            <a href="#" aria-label="Приобрести абонемент">Купить абонемент</a>
+          </li>
+          <li class="features__item features__item--6" tabindex="0" aria-label="Тариф 'Дневной'">
+            <h3>Дневной</h3>
+            <p>с 8:00 до 17:00</p>
+            <b>10000</b>
+            <strong>10000</strong>
+            <a href="#" aria-label="Приобрести абонемент">Купить абонемент</a>
+          </li>
+          <li class="features__item features__item--6" tabindex="0" aria-label="Тариф 'Полный день'">
             <h3>Полный день</h3>
             <p>с 8:00 до 22:00</p>
-            <b>2700</b>
-            <strong>2700</strong>
+            <b>14000</b>
+            <strong>14000</strong>
+            <a href="#" aria-label="Приобрести абонемент">Купить абонемент</a>
+          </li>
+
+          <li class="features__item features__item--12" tabindex="0" aria-label="Тариф 'С Тренером'">
+            <h3>С тренером</h3>
+            <p>144 занятия</p>
+            <b>42000</b>
+            <strong>42000</strong>
+            <a href="#" aria-label="Приобрести абонемент">Купить абонемент</a>
+          </li>
+          <li class="features__item features__item--12" tabindex="0" aria-label="Тариф 'Дневной'">
+            <h3>Дневной</h3>
+            <p>с 8:00 до 17:00</p>
+            <b>18000</b>
+            <strong>18000</strong>
+            <a href="#" aria-label="Приобрести абонемент">Купить абонемент</a>
+          </li>
+          <li class="features__item features__item--12" tabindex="0" aria-label="Тариф 'Полный день'">
+            <h3>Полный день</h3>
+            <p>с 8:00 до 22:00</p>
+            <b>24000</b>
+            <strong>24000</strong>
             <a href="#" aria-label="Приобрести абонемент">Купить абонемент</a>
           </li>
         </ul>
@@ -140,9 +185,9 @@
       <h2>Тренеры</h2>
       <div class="trainers__wrapper slider">
         <button class="trainers__prev slider__btn slider__btn--prev">Слайдер назад</button>
-        <div class="trainers__gallery">
-          <ul class="trainers__list slider__list">
-            <li class="trainers__item trainers__item--desktop" tabindex="0" aria-label="Информация о тренере">
+        <div class="trainers__gallery swiper-container swiper1">
+          <ul class="trainers__list swiper-wrapper">
+            <li class="trainers__item trainers__item--desktop swiper-slide" tabindex="0" aria-label="Информация о тренере">
               <!-- item-1 -->
               <img class="trainers__image trainers__image--mobile" width="226" height="274" src="img/trainer_1_mobile.jpg" srcset="img/trainer_1_mobile.jpg 1x, img/trainer_1_mobile_2x.jpg 2x" alt="Фото тренера">
               <img class="trainers__image trainers__image--tablet" width="270" height="294" src="img/trainer_1_tablet.jpg" srcset="img/trainer_1_tablet.jpg 1x, img/trainer_1_tablet_2x.jpg 2x" alt="Фото тренера">
@@ -158,7 +203,7 @@
                 </ul>
               </div>
             </li>
-            <li class="trainers__item trainers__item--desktop" tabindex="0" aria-label="Информация о тренере">
+            <li class="trainers__item trainers__item--desktop swiper-slide" tabindex="0" aria-label="Информация о тренере">
               <!-- item-2 -->
               <img class="trainers__image trainers__image--mobile" width="226" height="274" src="img/trainer_1_mobile.jpg" srcset="img/trainer_1_mobile.jpg 1x, img/trainer_1_mobile_2x.jpg 2x" alt="Фото тренера">
               <img class="trainers__image trainers__image--tablet" width="270" height="294" src="img/trainer_2_tablet.jpg" srcset="img/trainer_2_tablet.jpg 1x, img/trainer_2_tablet_2x.jpg 2x" alt="Фото тренера">
@@ -174,7 +219,7 @@
                 </ul>
               </div>
             </li>
-            <li class="trainers__item trainers__item--tablet trainers__item--mobile" tabindex="0" aria-label="Информация о тренере">
+            <li class="trainers__item trainers__item--tablet trainers__item--mobile swiper-slide" tabindex="0" aria-label="Информация о тренере">
               <!-- item-3 -->
               <img class="trainers__image trainers__image--mobile" width="226" height="274" src="img/trainer_1_mobile.jpg" srcset="img/trainer_1_mobile.jpg 1x, img/trainer_1_mobile_2x.jpg 2x" alt="Фото тренера">
               <img class="trainers__image trainers__image--tablet" width="270" height="294" src="img/trainer_1_tablet.jpg" srcset="img/trainer_1_tablet.jpg 1x, img/trainer_1_tablet_2x.jpg 2x" alt="Фото тренера">
@@ -190,7 +235,7 @@
                 </ul>
               </div>
             </li>
-            <li class="trainers__item trainers__item--tablet" tabindex="0" aria-label="Информация о тренере">
+            <li class="trainers__item trainers__item--tablet swiper-slide swiper1" tabindex="0" aria-label="Информация о тренере">
               <!-- item-4 -->
               <img class="trainers__image trainers__image--mobile" width="226" height="274" src="img/trainer_1_mobile.jpg" srcset="img/trainer_1_mobile.jpg 1x, img/trainer_1_mobile_2x.jpg 2x" alt="Фото тренера">
               <img class="trainers__image trainers__image--tablet" width="270" height="294" src="img/trainer_2_tablet.jpg" srcset="img/trainer_2_tablet.jpg 1x, img/trainer_2_tablet_2x.jpg 2x" alt="Фото тренера">
@@ -206,7 +251,7 @@
                 </ul>
               </div>
             </li>
-            <li class="trainers__item trainers__item--desktop" tabindex="0" aria-label="Информация о тренере">
+            <li class="trainers__item trainers__item--desktop swiper-slide" tabindex="0" aria-label="Информация о тренере">
               <!-- item-1 -->
               <img class="trainers__image trainers__image--mobile" width="226" height="274" src="img/trainer_1_mobile.jpg" srcset="img/trainer_1_mobile.jpg 1x, img/trainer_1_mobile_2x.jpg 2x" alt="Фото тренера">
               <img class="trainers__image trainers__image--tablet" width="270" height="294" src="img/trainer_1_tablet.jpg" srcset="img/trainer_1_tablet.jpg 1x, img/trainer_1_tablet_2x.jpg 2x" alt="Фото тренера">
@@ -222,7 +267,7 @@
                 </ul>
               </div>
             </li>
-            <li class="trainers__item trainers__item--desktop" tabindex="0" aria-label="Информация о тренере">
+            <li class="trainers__item trainers__item--desktop swiper-slide" tabindex="0" aria-label="Информация о тренере">
               <!-- item-2 -->
               <img class="trainers__image trainers__image--mobile" width="226" height="274" src="img/trainer_1_mobile.jpg" srcset="img/trainer_1_mobile.jpg 1x, img/trainer_1_mobile_2x.jpg 2x" alt="Фото тренера">
               <img class="trainers__image trainers__image--tablet" width="270" height="294" src="img/trainer_2_tablet.jpg" srcset="img/trainer_2_tablet.jpg 1x, img/trainer_2_tablet_2x.jpg 2x" alt="Фото тренера">
@@ -238,7 +283,7 @@
                 </ul>
               </div>
             </li>
-            <li class="trainers__item trainers__item--tablet trainers__item--mobile" tabindex="0" aria-label="Информация о тренере">
+            <li class="trainers__item trainers__item--tablet trainers__item--mobile swiper-slide" tabindex="0" aria-label="Информация о тренере">
               <!-- item-3 -->
               <img class="trainers__image trainers__image--mobile" width="226" height="274" src="img/trainer_1_mobile.jpg" srcset="img/trainer_1_mobile.jpg 1x, img/trainer_1_mobile_2x.jpg 2x" alt="Фото тренера">
               <img class="trainers__image trainers__image--tablet" width="270" height="294" src="img/trainer_1_tablet.jpg" srcset="img/trainer_1_tablet.jpg 1x, img/trainer_1_tablet_2x.jpg 2x" alt="Фото тренера">
@@ -254,7 +299,7 @@
                 </ul>
               </div>
             </li>
-            <li class="trainers__item trainers__item--tablet" tabindex="0" aria-label="Информация о тренере">
+            <li class="trainers__item trainers__item--tablet swiper-slide" tabindex="0" aria-label="Информация о тренере">
               <!-- item-4 -->
               <img class="trainers__image trainers__image--mobile" width="226" height="274" src="img/trainer_1_mobile.jpg" srcset="img/trainer_1_mobile.jpg 1x, img/trainer_1_mobile_2x.jpg 2x" alt="Фото тренера">
               <img class="trainers__image trainers__image--tablet" width="270" height="294" src="img/trainer_2_tablet.jpg" srcset="img/trainer_2_tablet.jpg 1x, img/trainer_2_tablet_2x.jpg 2x" alt="Фото тренера">
@@ -372,32 +417,34 @@
       <h2>Отзывы</h2>
       <div class="reviews__wrapper slider">
         <button class="reviews__btn reviews__btn--prev slider__btn slider__btn--prev">К предидущему отзыву</button>
-        <ul class="reviews__list">
-          <li class="reviews__item">
-            <!-- item 1 -->
-            <picture>
-              <source media="(max-width: 767px)" srcset="img/review_1_mobile.png 1x, img/review_1_mobile_2x.png 2x">
-              <img src="img/review_1.png" srcset="img/review_1_2x.png 2x" alt="Фото тренера">
-            </picture>
-            <h3>Анна Орлова</h3>
-            <blockquote>
-              <cite>Анна Орлова</cite>
-              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-            </blockquote>
-          </li>
-          <li class="reviews__item">
-            <!-- item 2 -->
-            <picture>
-              <source media="(max-width: 767px)" srcset="img/review_1_mobile.png 1x, img/review_1_mobile_2x.png 2x">
-              <img src="img/review_1.png" srcset="img/review_1.png 1x, img/review_1_2x.png 2x" alt="Фото тренера">
-            </picture>
-            <h3>Анна Орлова</h3>
-            <blockquote>
-              <cite>Анна Орлова</cite>
-              <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
-            </blockquote>
-          </li>
-        </ul>
+        <div class="reviews__gallery swiper-container swiper2">
+          <ul class="reviews__list swiper-wrapper">
+            <li class="reviews__item swiper-slide">
+
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/review_1_mobile.png 1x, img/review_1_mobile_2x.png 2x">
+                <img src="img/review_1.png" srcset="img/review_1_2x.png 2x" alt="Фото тренера">
+              </picture>
+              <h3>Анна Орлова</h3>
+              <blockquote>
+                <cite>Анна Орлова</cite>
+                <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </blockquote>
+            </li>
+            <li class="reviews__item swiper-slide">
+
+              <picture>
+                <source media="(max-width: 767px)" srcset="img/review_1_mobile.png 1x, img/review_1_mobile_2x.png 2x">
+                <img src="img/review_1.png" srcset="img/review_1.png 1x, img/review_1_2x.png 2x" alt="Фото тренера">
+              </picture>
+              <h3>Анна Орлова</h3>
+              <blockquote>
+                <cite>Анна Орлова</cite>
+                <p>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</p>
+              </blockquote>
+            </li>
+          </ul>
+        </div>
         <button class="reviews__btn reviews__btn--next slider__btn slider__btn--next">К следующему отзыву</button>
       </div>
     </section>

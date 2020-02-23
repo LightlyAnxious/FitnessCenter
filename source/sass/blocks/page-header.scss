@@ -5,9 +5,12 @@
   border: 1px solid #000000;
   box-sizing: border-box;
 
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  // background: conic-gradient(from 85deg at 16.03% 39.06%, #b80027, #003d85 23%, #b80027 99%) no-repeat border-box;
+  background: 0 0 url("../img/header_bg.jpg") no-repeat;
 
-  background: conic-gradient(from 85deg at 16.03% 39.06%, #b80027, #003d85 23%, #b80027 99%) no-repeat border-box;
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background: 0 0 url("../img/header_bg@2x.jpg") no-repeat;
+  }
 }
 
 .page-header__wrapper {
@@ -242,7 +245,11 @@
   .page-header {
     min-height: 554px;
 
-    background: conic-gradient(from 85deg at 20.7% 35.74%, #b80027, #003d85 23%, #b80027 99%) no-repeat border-box;
+    background: 0 0 url("../img/header_bg_tablet.jpg") no-repeat cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: 0 0 url("../img/header_bg_tablet@2x.jpg") no-repeat cover;
+    }
   }
 
   .page-header__wrapper {
@@ -351,7 +358,11 @@
   .page-header {
     min-height: 491px;
 
-    background: conic-gradient(from 125deg at 35.31% 34.22%, #b80027, #003d85 23%, #b80027 99%) no-repeat border-box;
+    background: 0 0 url("../img/header_bg_mobile.jpg") no-repeat cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: 0 0 url("../img/header_bg_mobile@2x.jpg") no-repeat cover;
+    }
   }
 
   .page-header__wrapper {

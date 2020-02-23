@@ -1,68 +1,113 @@
 (function () {
   'use strict';
 
-  var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
-  var trainersList = document.querySelector('.trainers__list');
+  var trainersGallery = document.querySelector('.trainers__gallery');
   var reviewsList = document.querySelector('.reviews__list');
-  var prevTrainer = document.querySelector('.trainers__prev');
-  var nextTrainer = document.querySelector('.trainers__next');
-  var prevReview = document.querySelector('.reviews__btn--prev')
-  var nextReview = document.querySelector('.reviews__btn--next')
+  var featuresTab = document.querySelector('#radio-1')
+  var featuresTab6 = document.querySelector('#radio-6')
+  var featuresTab12 = document.querySelector('#radio-12')
+  var featuresItems1 = document.querySelectorAll('.features__item--1');
+  var featuresItems6 = document.querySelectorAll('.features__item--6');
+  var featuresItems12 = document.querySelectorAll('.features__item--12');
+  var featuresScale = document.querySelector('.features__range');
 
   // Объявление слайдера
-  if (trainersList) {
-    if (viewportWidth > 1200) {
-      var trainersSlider = new Siema({
-        selector: '.trainers__list',
-        perPage: 4,
-        startIndex: 0
-      });
-      prevTrainer.addEventListener('click', function () {
-        return trainersSlider.prev(4);
-      });
-      nextTrainer.addEventListener('click', function () {
-        return trainersSlider.next(4);
-      });
-    } else if (viewportWidth >= 768 && viewportWidth <= 1200) {
-      var _trainersSlider = new Siema({
-        selector: '.trainers__list',
-        perPage: 2,
-        startIndex: 2
-      });
 
-      prevTrainer.addEventListener('click', function () {
-        return _trainersSlider.prev(2);
-      });
-      nextTrainer.addEventListener('click', function () {
-        return _trainersSlider.next(2);
-      });
-    } else {
-      var _trainersSlider2 = new Siema({
-        selector: '.trainers__list',
-        perPage: 1,
-        startIndex: 2
-      });
+  if (trainersGallery) {
+    var trainersSlider = new Swiper('.swiper1', {
+      navigation: {
+        nextEl: '.trainers__next',
+        prevEl: '.trainers__prev',
+      },
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+      autoHeight: true,
+      cssWidthAndHeight: true,
+      autoResize: false,
+      visibilityFullFit: true,
+      setWrapperSize: true,
 
-      prevTrainer.addEventListener('click', function () {
-        return _trainersSlider2.prev(1);
-      });
-      nextTrainer.addEventListener('click', function () {
-        return _trainersSlider2.next(1);
-      });
-    }
+      breakpoints: {
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 40,
+        },
+        1200: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          spaceBetween: 37,
+        },
+      },
+
+      debugger: true,
+    });
   }
 
   if (reviewsList) {
-    var reviewSlider = new Siema({
-      selector: '.reviews__list',
-      perPage: 1,
-      startIndex: 0
+    var reviewssSlider = new Swiper('.swiper2', {
+      navigation: {
+        nextEl: '.reviews__btn--next',
+        prevEl: '.reviews__btn--prev',
+      },
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+      // autoHeight: true,
+      cssWidthAndHeight: true,
+      autoResize: false,
+      visibilityFullFit: true,
+      // setWrapperSize: true,
     });
-    prevReview.addEventListener('click', function () {
-      return reviewSlider.prev(1);
+  }
+
+  var swiper = new Swiper('.swiper3', {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    navigation: {
+      nextEl: '.reviews__btn--next',
+      prevEl: '.reviews__btn--prev',
+    },
+  });
+
+  // Переключение абонементов
+  var getFlex = function (items, shutdown1, shutdown2) {
+    for (var i = 0; i < items.length; i++) {
+      items[i].style.display = 'flex';
+      shutdown1[i].style.display = 'none';
+      shutdown2[i].style.display = 'none';
+    }
+
+    return items;
+    return shutdown1;
+    return shutdown2;
+  }
+
+  if (featuresTab && featuresScale) {
+    featuresTab.addEventListener('click', function () {
+      if (featuresTab.checked) {
+        getFlex (featuresItems1, featuresItems6, featuresItems12);
+        featuresScale.style.width = '19%';
+      }
     });
-    nextReview.addEventListener('click', function () {
-      return reviewSlider.next(1);
+  }
+
+  if (featuresTab6 && featuresScale) {
+    featuresTab6.addEventListener('click', function () {
+      if (featuresTab6.checked) {
+        getFlex (featuresItems6, featuresItems1, featuresItems12);
+        featuresScale.style.width = '50%';
+      }
+    });
+  }
+
+  if (featuresTab12 && featuresScale) {
+    featuresTab12.addEventListener('click', function () {
+      if (featuresTab12.checked) {
+        getFlex (featuresItems12, featuresItems1, featuresItems6);
+        featuresScale.style.width = '100%';
+      }
     });
   }
 })();

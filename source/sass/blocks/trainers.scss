@@ -33,38 +33,42 @@
 }
 
 .trainers__gallery {
+  display: block;
   width: 90.75%;
 
   overflow: hidden;
+
+  white-space: nowrap;
 }
 
 .trainers__list {
   @include list-reset;
 
-  width: 103.448%;
+  display: block;
+  width: 100%;
 
-  white-space: nowrap;
+  letter-spacing: 0;
 }
 
 .trainers__item {
   position: relative;
 
   display: inline-block;
-  width: 100%;
-  max-width: 260px;
+
+  width: 260px;
   height: 294px;
   margin-right: 3.44%;
+  margin-left: -0.37%;
   overflow: hidden;
   box-sizing: border-box;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
 
   &:nth-of-type(4n),
   &:last-of-type {
     margin-right: 0;
-  }
-
-  & img {
-    width: 100%;
-    height: 100%;
   }
 
   & p {
@@ -213,21 +217,17 @@
   }
 
   .trainers__gallery {
-    width: 83.48%;
-  }
-
-  .trainers__list {
-    width: 105.3%;
+    width: 566px;
   }
 
   .trainers__item {
-    max-width: 270px;
+    width: 268px;
     margin-right: 5.3%;
 
     & p {
       bottom: 23px;
 
-      transform: translate(-49%, 0);
+      max-width: 268px;
     }
   }
 
@@ -242,6 +242,7 @@
   }
 
   .trainers__desc {
+    width: 268px;
     left: -3px;
   }
 }
@@ -264,25 +265,24 @@
   }
 
   .trainers__gallery {
-    width: 77.93%;
-    min-width: 200px;
+    width: 226px;
   }
 
   .trainers__list {
     width: 100%;
-    max-width: 226px;
-    margin: 0 auto;
+    margin: 0 0;
   }
 
   .trainers__item {
-    display: block;
-    min-width: 220px;
+    display: inline-block;
+    width: 226px;
     height: 274px;
+    margin: 0 0 0 -0.2%;
 
     & p {
       bottom: 23px;
 
-      transform: translate(-49%, 0);
+      transform: translate(-50%, 0);
     }
   }
 
