@@ -9,7 +9,6 @@
   var featuresItems1 = document.querySelectorAll('.features__item--1');
   var featuresItems6 = document.querySelectorAll('.features__item--6');
   var featuresItems12 = document.querySelectorAll('.features__item--12');
-  var featuresScale = document.querySelector('.features__range');
 
   // Объявление слайдера
 
@@ -93,7 +92,6 @@
     featuresTab.addEventListener('click', function () {
       if (featuresTab.checked) {
         getFlex (featuresItems1, featuresItems6, featuresItems12);
-        featuresScale.style.width = '19%';
       }
     });
   }
@@ -102,7 +100,6 @@
     featuresTab6.addEventListener('click', function () {
       if (featuresTab6.checked) {
         getFlex (featuresItems6, featuresItems1, featuresItems12);
-        featuresScale.style.width = '50%';
       }
     });
   }
@@ -111,7 +108,6 @@
     featuresTab12.addEventListener('click', function () {
       if (featuresTab12.checked) {
         getFlex (featuresItems12, featuresItems1, featuresItems6);
-        featuresScale.style.width = '100%';
       }
     });
   }
