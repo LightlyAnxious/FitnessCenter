@@ -120,6 +120,10 @@
     & p {
       letter-spacing: 0.005em;
     }
+
+    & blockquote {
+      width: 59.5%;
+    }
   }
 }
 
@@ -139,8 +143,12 @@
     margin-bottom: 70px;
   }
 
+  .reviews__gallery {
+    width: 78.59%;
+  }
+
   .reviews__list {
-    width: 77.93%;
+    width: 100%;
   }
 
   .reviews__item {
@@ -159,12 +167,12 @@
     & img {
       width: 68px;
       height: 68px;
-      margin: 40px 6.63% 15px 17.69%;
+      margin: 40px 5.3% 15px 17.69%;
     }
 
     & blockquote {
-      margin: 0 11.06% 25px 11.06%;
-      width: 77.87%;
+      margin: 0 9.06% 25px 11.06%;
+      width: 76.87%;
 
       text-align: center;
     }

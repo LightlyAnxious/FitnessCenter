@@ -164,12 +164,12 @@
     margin-top: 99px;
     margin-bottom: 100px;
 
-    background: 98% 50% #010245 url("../img/promo_bg_tablet.jpg") no-repeat;
+    background: 100% 50% #010245 url("../img/promo_bg_tablet.jpg") no-repeat;
   }
 
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
     .competition {
-      background: 98% 50% #010245 url("../img/promo_bg_tablet_2x.jpg") no-repeat;
+      background: 100% 50% #010245 url("../img/promo_bg_tablet_2x.jpg") no-repeat;
       background-size: 368px 292px;
     }
   }

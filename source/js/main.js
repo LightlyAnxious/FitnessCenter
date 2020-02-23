@@ -20,6 +20,7 @@
         prevEl: '.trainers__prev',
       },
       slidesPerView: 1,
+      initialSlide: 2,
       slidesPerGroup: 1,
       spaceBetween: 0,
       autoHeight: true,
@@ -32,12 +33,16 @@
         768: {
           slidesPerView: 2,
           slidesPerGroup: 2,
-          spaceBetween: 40,
+          spaceBetween: 26,
+          initialSlide: 2,
+          setWrapperSize: false,
         },
         1200: {
+          initialSlide: 1,
           slidesPerView: 4,
           slidesPerGroup: 4,
-          spaceBetween: 37,
+          spaceBetween: 40.5,
+          setWrapperSize: false,
         },
       },
 

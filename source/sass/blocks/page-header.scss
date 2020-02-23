@@ -7,9 +7,11 @@
 
   // background: conic-gradient(from 85deg at 16.03% 39.06%, #b80027, #003d85 23%, #b80027 99%) no-repeat border-box;
   background: 0 0 url("../img/header_bg.jpg") no-repeat;
+  background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background: 0 0 url("../img/header_bg@2x.jpg") no-repeat;
+    background-size: cover;
   }
 }
 
@@ -104,7 +106,7 @@
 .page-header__membership {
   display: grid;
   grid-template-columns: 23% 16% 56%;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 13.5% auto auto;
 
   width: 36%;
   margin: 91px 0 92px;
@@ -120,7 +122,7 @@
     align-self: end;
 
     display: block;
-    margin-bottom: 13px;
+    margin-bottom: 5px;
 
     text-align: right;
     font-size: 49px;
@@ -136,7 +138,7 @@
 
     display: block;
     width: auto;
-    margin: 0;
+    margin: 10px 0 0;
 
     font-size: 112px;
     font-weight: bolder;
@@ -160,8 +162,8 @@
     align-self: start;
 
     display: block;
-    margin-top: 58px;
-    padding: 19px 54px 19px 54px;
+    margin-top: 51px;
+    padding: 19px 46px;
     border: 4px solid #ffffff;
 
     color: #ffffff;
@@ -194,7 +196,7 @@
   grid-row: 2;
   align-self: end;
 
-  margin: 12px 30px 26px 18px;
+  margin: 12px 30px 34px 18px;
   width: 115px;
 
   font-size: 14px;
@@ -245,10 +247,13 @@
   .page-header {
     min-height: 554px;
 
-    background: 0 0 url("../img/header_bg_tablet.jpg") no-repeat cover;
+    background: 0 0 url("../img/header_bg_tablet.jpg") no-repeat;
+    background-size: cover;
+
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: 0 0 url("../img/header_bg_tablet@2x.jpg") no-repeat cover;
+      background: 0 0 url("../img/header_bg_tablet@2x.jpg") no-repeat;
+      background-size: cover;
     }
   }
 
@@ -318,7 +323,7 @@
       grid-column: 2 / span 3;
       grid-row: 2;
 
-      margin-top: 5px;
+      margin-top: 7px;
 
       font-size: 90px;
       line-height: 86px;
@@ -339,7 +344,7 @@
   .page-header__features {
     align-self: end;
     justify-self: start;
-    margin: 0 0 17px;
+    margin: 0 0 20px;
 
     & p {
       margin: 0;
@@ -358,10 +363,13 @@
   .page-header {
     min-height: 491px;
 
-    background: 0 0 url("../img/header_bg_mobile.jpg") no-repeat cover;
+    background: 0 0 url("../img/header_bg_mobile.jpg") no-repeat;
+    background-size: cover;
+
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: 0 0 url("../img/header_bg_mobile@2x.jpg") no-repeat cover;
+      background: 0 0 url("../img/header_bg_mobile@2x.jpg") no-repeat;
+      background-size: cover;
     }
   }
 
@@ -406,7 +414,7 @@
 
     & b {
       width: 100%;
-      margin: 52px 0 5px 0;
+      margin: 56px 0 5px 0;
 
       font-size: 28px;
       line-height: 28px;
@@ -428,7 +436,7 @@
       width: 100%;
       max-width: unset;
       padding: 20px 0;
-      margin: 8px 0 0;
+      margin: 5px 0 0;
     }
   }
 
@@ -437,6 +445,6 @@
     grid-row: 2;
     align-self: end;
 
-    margin: 0 0 44px;
+    margin: 0 0 51px;
   }
 }
