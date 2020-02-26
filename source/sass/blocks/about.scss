@@ -8,7 +8,9 @@
   margin: 0 auto;
 
   color: $dark-navy;
+}
 
+.about.lazy-bg-loaded {
   background-image: url("../img/about_bg.jpg");
   background-repeat: no-repeat;
   background-position: 100% 120px;
@@ -16,7 +18,7 @@
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .about {
+  .about.lazy-bg-loaded {
     background-image: url("../img/about_bg_2x.jpg");
     background-repeat: no-repeat;
     background-position: 100% 120px;
@@ -69,7 +71,9 @@
 
   margin: 408px auto 120px 0;
 
-  background: 0 0 url("../img/about_video.jpg") no-repeat;
+  &.lazy-bg-loaded {
+    background: 0 0 url("../img/about_video.jpg") no-repeat;
+  }
 
   & button {
     @include button-reset;
@@ -151,7 +155,7 @@
 }
 
 @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-  .about__video {
+  .about__video.lazy-bg-loaded {
     background: 0 0 url("../img/about_video_2x.jpg") no-repeat;
     background-size: 364px 228px;
   }
@@ -164,14 +168,16 @@
     padding: 0 2%;
     min-height: 754px;
 
-    background-image: url("../img/about_bg_tablet.jpg");
-    background-repeat: no-repeat;
-    background-position: center 326px;
-    background-size: 678px 345px;
+    &.lazy-bg-loaded {
+      background-image: url("../img/about_bg_tablet.jpg");
+      background-repeat: no-repeat;
+      background-position: center 326px;
+      background-size: 678px 345px;
+    }
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .about {
+    .about.lazy-bg-loaded {
       background-image: url("../img/about_bg_tablet_2x.jpg");
       background-repeat: no-repeat;
       background-position: center 326px;
@@ -212,7 +218,9 @@
     height: 167px;
     margin: 267px auto 100px auto;
 
-    background: 0 0 url("../img/about_video_tablet.jpg") no-repeat;
+    &.lazy-bg-loaded {
+      background: 0 0 url("../img/about_video_tablet.jpg") no-repeat;
+    }
 
     & video {
       width: 266px;
@@ -241,7 +249,7 @@
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .about__video {
+    .about__video.lazy-bg-loaded {
       background: 0 0 url("../img/about_video_tablet_2x.jpg") no-repeat;
       background-size: 266px 167px;
     }
@@ -254,14 +262,16 @@
     padding: 0;
     min-height: unset;
 
-    background-image: url("../img/about_bg_mobile.jpg");
-    background-repeat: no-repeat;
-    background-position: center 335px;
-    background-size: 320px 313px;
+    &.lazy-bg-loaded {
+      background-image: url("../img/about_bg_mobile.jpg");
+      background-repeat: no-repeat;
+      background-position: center 335px;
+      background-size: 320px 313px;
+    }
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .about {
+    .about.lazy-bg-loaded {
       background-image: url("../img/about_bg_mobile_2x.jpg");
       background-repeat: no-repeat;
       background-position: center 335px;
@@ -301,11 +311,13 @@
     height: 167px;
     margin: 360px auto 70px auto;
 
-    background: 0 0 url("../img/about_video_mobile.jpg") no-repeat;
+    &.lazy-bg-loaded {
+      background: 0 0 url("../img/about_video_mobile.jpg") no-repeat;
+    }
   }
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    .about__video {
+    .about__video.lazy-bg-loaded {
       background: 0 0 url("../img/about_video_mobile_2x.jpg") no-repeat;
       background-size: 320px 167px;
     }

@@ -8,11 +8,15 @@
 
   color: #ffffff;
 
-  background: 100% 50% #010245 url("../img/promo_bg.jpg") no-repeat;
+  background-color: #010245;
+
+  &.lazy-bg-loaded {
+    background: 100% 50% url("../img/promo_bg.jpg") no-repeat;
+  }
 }
 
 @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-  .competition {
+  .competition.lazy-bg-loaded {
     background: 100% 50% #010245 url("../img/promo_bg_2x.jpg") no-repeat;
     background-size: 660px 500px;
   }
@@ -164,11 +168,13 @@
     margin-top: 99px;
     margin-bottom: 100px;
 
-    background: 100% 50% #010245 url("../img/promo_bg_tablet.jpg") no-repeat;
+    &.lazy-bg-loaded {
+      background: 100% 50% #010245 url("../img/promo_bg_tablet.jpg") no-repeat;
+    }
   }
 
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-    .competition {
+    .competition.lazy-bg-loaded {
       background: 100% 50% #010245 url("../img/promo_bg_tablet_2x.jpg") no-repeat;
       background-size: 368px 292px;
     }
@@ -263,11 +269,13 @@
     margin-top: 70px;
     margin-bottom: 70px;
 
-    background: 50% 100% #010245 url("../img/promo_bg_mobile.jpg") no-repeat;
+    &.lazy-bg-loaded {
+      background: 50% 100% #010245 url("../img/promo_bg_mobile.jpg") no-repeat;
+    }
   }
 
   @media (min-resolution: $retina-dppx), (min-resolution: $retina-dpi) {
-    .competition {
+    .competition.lazy-bg-loaded {
       background: 50% 100% #010245 url("../img/promo_bg_mobile_2x.jpg") no-repeat;
       background-size: auto 292px;
     }

@@ -15,15 +15,10 @@
   <link rel="preload" href="fonts/BebasNeue-Bold.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/BebasNeue-Bold.woff" as="font" crossorigin="anonymous">
   <link rel="stylesheet preload" href="css/style.min.css" as="style">
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-  <script>
-    const observer = lozad(); // lazy loads elements with default selector as '.lozad'
-    observer.observe()
-  </script>
 </head>
 <body>
-  <header class="page-header lozad" data-background-image-set="url('img/header_bg.jpg') 1x, url('img/header_bg_2x.jpg') 2x">
-    <div class="page-header__wrapper lozad" data-background-image-set="url('img/header_promo.jpg') 1x, url('img/header_promo_2x.jpg') 2x">
+  <header class="page-header lazy-bg">
+    <div class="page-header__wrapper lazy-bg">
       <nav class="page-header__nav">
         <svg class="page-header__logo page-header__logo--desktop">
           <use xlink:href="img/sprite_auto.svg#logo"></use>
@@ -57,7 +52,7 @@
     </div>
   </header>
   <main class="site-content">
-    <section class="about lozad" data-background-image-set="url('img/about_bg.jpg') 1x, url('img/about_bg_2x.jpg') 2x" data-toggle-class="active">
+    <section class="about lazy-bg">
       <div class="about__inner">
         <h2>Тренажерный зал</h2>
         <p>Просторный зал площадью 900 кв/м</p>
@@ -66,7 +61,7 @@
           <p><span>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть несколько оборудованных залов для различных видов групповых занятий.</span></p>
         </div>
       </div>
-      <div class="about__video lozad" data-background-image-set="url('img/about_video.jpg') 1x, url('img/about_video_2x.jpg') 2x">
+      <div class="about__video lazy-bg">
         <video src="#" width="364" height="228" aria-label="Промо видео Supergym"></video>
         <button>Воспроизвести видео</button>
       </div>
@@ -99,7 +94,6 @@
           </div>
         </div>
         <ul class="features__list">
-
           <li class="features__item features__item--1" tabindex="0" aria-label="Тариф 'С Тренером'">
             <h3>С тренером</h3>
             <p>12 занятий</p>
@@ -121,7 +115,6 @@
             <strong>2700</strong>
             <a href="#" aria-label="Приобрести абонемент">Купить абонемент</a>
           </li>
-
           <li class="features__item features__item--6" tabindex="0" aria-label="Тариф 'С Тренером'">
             <h3>С тренером</h3>
             <p>72 занятия</p>
@@ -143,7 +136,6 @@
             <strong>14000</strong>
             <a href="#" aria-label="Приобрести абонемент">Купить абонемент</a>
           </li>
-
           <li class="features__item features__item--12" tabindex="0" aria-label="Тариф 'С Тренером'">
             <h3>С тренером</h3>
             <p>144 занятия</p>
@@ -167,9 +159,9 @@
           </li>
         </ul>
       </div>
-      <span class="features__image lozad" data-background-image-set="url('img/weights_bg.png') 1x, url('img/weights_bg_2x.png') 2x"></span>
+      <span class="features__image lazy-bg"></span>
     </section>
-    <article class="competition lozad" data-background-image-set="url('img/promo_bg.jpg') 1x, url('img/promo_bg_2x.jpg') 2x">
+    <article class="competition lazy-bg">
       <div class="competition__wrapper">
         <div class="competition__desc">
           <h2>SUPER GAMES</h2>
@@ -399,7 +391,7 @@
     <section class="campaigns">
       <h2>Акции</h2>
       <div class="campaigns__wrapper">
-        <div class="campaigns__item campaigns__item--main lozad" data-background-image-set="url('img/campaign_bg.jpg') 1x, url('img/campaign_bg_2x.jpg') 2x">
+        <div class="campaigns__item campaigns__item--main lazy-bg">
           <h3 class="campaigns__heading">Год<span>4999</span></h3>
           <p>Безлимитный абонемент в тренажерный зал</p>
           <a href="#" aria-label="Узнать подробнее об акции">подробнее</a>
@@ -545,7 +537,13 @@
       </ul>
     </div>
   </footer>
+  <script src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=Object.assign%2CIntersectionObserver" crossorigin="anonymous"></script>
+  <script src="js/libs/yall.min.js"></script>
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", yall);
+  </script>
   <script src="js/vendor.js" defer=""></script>
   <script src="js/main.js" defer=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/svgxuse/1.2.6/svgxuse.min.js" async=""></script>
 </body>
 </html>
