@@ -84,6 +84,10 @@
       }
     }
 
+    &:required {
+      box-shadow: none;
+    }
+
     &::placeholder {
       @include roboto-r;
 
@@ -197,13 +201,33 @@
     line-height: 150%;
   }
 
-  & p {
+  & p,
+  & a {
     @include roboto-r;
 
     margin: 0 0 0 4px;
 
+    color: $dark-navy;
     font-size: 14px;
     line-height: 21px;
+  }
+
+  & a {
+    &:hover,
+    &:focus {
+      color: #d10a42;
+    }
+
+    &:focus {
+      outline: 5px solid #2aa4f4;
+      outline-offset: 3px;
+    }
+
+    &:active {
+      color: #d10a42;
+      opacity: 0.2;
+      outline: none;
+    }
   }
 
   &--tel {
@@ -211,7 +235,8 @@
       margin-left: 60px;
     }
 
-    & p {
+    & p,
+    & a {
       margin-left: 60px;
     }
   }
@@ -221,7 +246,8 @@
       margin-left: 60px;
     }
 
-    & p {
+    & p,
+    & a {
       margin-left: 60px;
     }
   }
@@ -289,7 +315,7 @@
   }
 
   .feedback__item {
-    margin-bottom: 22px;
+    margin-bottom: 20px;
 
     & h4 {
       margin: 0 0 5px 0;
@@ -297,7 +323,8 @@
       font-size: 20px;
     }
 
-    & p {
+    & p,
+    & a {
       margin: 0;
 
       font-size: 18px;
@@ -309,7 +336,8 @@
         margin-left: 18%;
       }
 
-      & p {
+      & p,
+      & a {
         margin-left: 18%;
       }
     }
@@ -394,7 +422,8 @@
       font-size: 20px;
     }
 
-    & p {
+    & p,
+    & a {
       margin: 0;
 
       font-size: 18px;
@@ -406,7 +435,8 @@
         margin-left: 0;
       }
 
-      & p {
+      & p,
+      & a {
         margin-left: 0;
       }
     }

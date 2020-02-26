@@ -41,11 +41,13 @@
       transform: rotate(45deg);
     }
 
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
       background-color: $dark-navy;
     }
 
-    &:hover::after {
+    &:hover::after,
+    &:focus::after {
       background-color: $dark-navy;
     }
 
@@ -91,11 +93,13 @@
       transform: rotate(-45deg);
     }
 
-    &:hover::before {
+    &:hover::before,
+    &:focus::before {
       background-color: $dark-navy;
     }
 
-    &:hover::after {
+    &:hover::after,
+    &:focus::after {
       background-color: $dark-navy;
     }
 
@@ -113,8 +117,7 @@
   }
 
   &:focus {
-    outline: 5px solid #2aa4f4;
-    outline-offset: 3px;
+    outline: none;
   }
 }
 
