@@ -78,11 +78,18 @@
 
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
 
   width: 110px;
-  margin: 41px 0;
+  margin: 34px 0;
+
+  & li {
+    margin-right: 20px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
 }
 
 .page-footer__link {
@@ -110,6 +117,14 @@
     & svg {
       fill: $red;
     }
+  }
+
+  &--vk {
+    padding: 5px 5px 5px 0;
+  }
+
+  &--fb {
+    padding: 5px 0 5px 5px;
   }
 }
 
@@ -153,6 +168,10 @@
 
   .page-footer__social {
     width: 14.75%;
+
+    & li {
+      margin-right: 15px;
+    }
   }
 }
 
@@ -223,13 +242,14 @@
   }
 
   .page-footer__social {
-    width: 49.31%;
+    width: 50%;
     margin: 0;
 
     & li {
       display: flex;
       align-items: center;
-      justify-content: center;
+
+      margin-right: 30px;
     }
   }
 

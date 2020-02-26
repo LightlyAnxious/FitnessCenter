@@ -106,10 +106,10 @@
 .page-header__membership {
   display: grid;
   grid-template-columns: 23% 16% 56%;
-  grid-template-rows: 13.5% auto auto;
+  grid-template-rows: 13.5% 23% 29% auto;
 
   width: 36%;
-  margin: 91px 0 92px;
+  margin: 91px 0 30px;
 
   background-color: transparent;
 
@@ -137,7 +137,7 @@
 
     display: block;
     width: auto;
-    margin: 4px 0 0;
+    margin: 0;
 
     font-size: 112px;
     font-weight: bolder;
@@ -161,7 +161,7 @@
     align-self: start;
 
     display: block;
-    margin-top: 51px;
+    margin-top: 35px;
     padding: 19px 46px;
     border: 4px solid #ffffff;
 
@@ -192,10 +192,10 @@
   @include roboto-r;
 
   grid-column: 1 / span 2;
-  grid-row: 2;
-  align-self: end;
+  grid-row: 3;
+  align-self: start;
 
-  margin: 12px 30px 32px 18px;
+  margin: 18px 30px 0 18px;
   width: 115px;
 
   font-size: 14px;
@@ -305,14 +305,14 @@
 
   .page-header__membership {
     grid-template-columns: 27.5% 15% 57.5%;
-    grid-template-rows: 31% auto 14%;
+    grid-template-rows: 25% 25% 33%;
 
     width: 47.78%;
     max-width: 400px;
-    margin: 0 0 113px;
+    margin: 0 0 102px;
 
     & b {
-      margin: 0;
+      margin: 0 0 5px;
 
       font-size: 34px;
       line-height: 34px;
@@ -341,7 +341,6 @@
   }
 
   .page-header__features {
-    align-self: end;
     justify-self: start;
     margin: 0 0 18px;
 
@@ -374,6 +373,7 @@
 
   .page-header__wrapper {
     width: 92%;
+    min-height: unset;
 
     background-image: none;
   }
@@ -406,21 +406,20 @@
 
   .page-header__membership {
     grid-template-columns: 26% 16.5% 57.5%;
-    grid-template-rows: auto 62% 20%;
+    grid-template-rows: 25.2% 22% auto;
 
     width: 100%;
     margin: 0;
 
     & b {
       width: 100%;
-      margin: 56px 0 5px 0;
 
       font-size: 28px;
       line-height: 28px;
     }
 
     & strong {
-      margin-top: 6px;
+      margin-top: 5px;
       margin-bottom: 0;
 
       font-size: 78px;
@@ -430,19 +429,17 @@
 
     & a {
       grid-column: 1 / span 3;
-      grid-row: 3;
+      grid-row: 4;
 
       width: 100%;
       max-width: unset;
       padding: 20px 0;
-      margin: 7px 0 0;
     }
   }
 
   .page-header__features {
     grid-column: 1 / span 2;
-    grid-row: 2;
-    align-self: end;
+    grid-row: 3;
 
     margin: 0 0 47px;
   }

@@ -213,7 +213,7 @@
   }
 
   .trainers__wrapper {
-    margin-bottom: 100px;
+    margin-bottom: 105px;
   }
 
   .trainers__gallery {
@@ -223,9 +223,11 @@
   .trainers__item {
     width: 268px;
     margin-right: 5.3%;
+    margin-left: 0;
 
     & p {
-      bottom: 23px;
+      left: 51%;
+      bottom: 21px;
 
       max-width: 268px;
     }
@@ -269,7 +271,7 @@
   }
 
   .trainers__list {
-    width: 100%;
+    width: 1005;
     margin: 0 0;
   }
 
@@ -277,7 +279,11 @@
     display: inline-block;
     width: 226px;
     height: 274px;
-    margin: 0 0 0 -0.2%;
+    margin: 0 0 0 -0.28%;
+
+    &:first-of-type {
+      margin-left: 0;
+    }
 
     & p {
       bottom: 23px;

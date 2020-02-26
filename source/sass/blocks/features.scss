@@ -82,14 +82,14 @@
     color: #d10a42;
   }
 
+  &:focus {
+    outline: none;
+  }
+
   &:active {
     color: #d10a42;
     opacity: 0.2;
-  }
-
-  &:focus {
-    outline: 5px solid #2aa4f4;
-    outline-offset: 3px;
+    outline: none;
   }
 }
 
