@@ -35,6 +35,8 @@
           spaceBetween: 26,
           initialSlide: 2,
           setWrapperSize: false,
+          cssWidthAndHeight: true,
+          visibilityFullFit: true,
         },
         1200: {
           initialSlide: 1,
@@ -58,22 +60,12 @@
       slidesPerView: 1,
       slidesPerGroup: 1,
       spaceBetween: 0,
-      // autoHeight: true,
       cssWidthAndHeight: true,
       autoResize: false,
       visibilityFullFit: true,
-      // setWrapperSize: true,
+      setWrapperSize: true,
     });
   }
-
-  var swiper = new Swiper('.swiper3', {
-    slidesPerView: 1,
-    spaceBetween: 0,
-    navigation: {
-      nextEl: '.reviews__btn--next',
-      prevEl: '.reviews__btn--prev',
-    },
-  });
 
   // Переключение абонементов
   var getFlex = function (items, shutdown1, shutdown2) {
