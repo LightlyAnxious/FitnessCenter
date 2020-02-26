@@ -386,7 +386,9 @@
     width: 92%;
     min-height: unset;
 
-    background-image: none;
+    &.lazy-bg-loaded {
+      background-image: none;
+    }
   }
 
   .page-header__nav {
