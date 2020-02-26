@@ -22,6 +22,7 @@
       initialSlide: 2,
       slidesPerGroup: 1,
       spaceBetween: 0,
+      lazy: true,
       autoHeight: true,
       cssWidthAndHeight: true,
       autoResize: false,
@@ -37,6 +38,7 @@
           setWrapperSize: false,
           cssWidthAndHeight: true,
           visibilityFullFit: true,
+          lazy: true,
         },
         1200: {
           initialSlide: 1,
@@ -44,6 +46,7 @@
           slidesPerGroup: 4,
           spaceBetween: 40.5,
           setWrapperSize: false,
+          lazy: true,
         },
       },
 
@@ -64,6 +67,7 @@
       autoResize: false,
       visibilityFullFit: true,
       setWrapperSize: true,
+      lazy: true,
     });
   }
 
