@@ -10,6 +10,10 @@
   var featuresItems6 = document.querySelectorAll('.features__item--6');
   var featuresItems12 = document.querySelectorAll('.features__item--12');
 
+  // Lazy loading images
+
+  document.addEventListener("DOMContentLoaded", yall);
+
   // Объявление слайдера
 
   if (trainersGallery) {
@@ -61,6 +65,7 @@
         prevEl: '.reviews__btn--prev',
       },
       slidesPerView: 1,
+      initialSlide: 0,
       slidesPerGroup: 1,
       spaceBetween: 0,
       cssWidthAndHeight: true,

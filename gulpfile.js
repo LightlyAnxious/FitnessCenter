@@ -25,13 +25,22 @@ gulp.task("css", function () {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 
 gulp.task("server", function () {
   server.init({
-    server: "source/",
+    server: "build/",
+    middleware: [
+      require("compression")(), // global
+      {
+          route: "/api", // per-route
+          handle: function (req, res, next) {
+              // handle any requests at /api
+          }
+      }
+    ],
     notify: false,
     open: true,
     cors: true,
@@ -86,7 +95,7 @@ gulp.task("html", function () {
 gulp.task("copy", function () {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
+    // "source/img/**",
     "source/js/**",
     "source//*.ico"
     ], {
