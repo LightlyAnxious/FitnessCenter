@@ -61,6 +61,7 @@
         prevEl: '.reviews__btn--prev',
       },
       slidesPerView: 1,
+      initialSlide: 0,
       slidesPerGroup: 1,
       spaceBetween: 0,
       cssWidthAndHeight: true,
