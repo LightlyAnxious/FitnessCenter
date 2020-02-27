@@ -42,15 +42,6 @@ gulp.task('js', function() {
 gulp.task("server", function () {
   server.init({
     server: "build/",
-    middleware: [
-      require("compression")(), // global
-      {
-          route: "/api", // per-route
-          handle: function (req, res, next) {
-              // handle any requests at /api
-          }
-      }
-    ],
     notify: false,
     open: true,
     cors: true,
