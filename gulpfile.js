@@ -17,6 +17,7 @@ var include = require("posthtml-include");
 var del = require("del");
 var uglify = require("gulp-uglify");
 var concat = require("gulp-concat");
+var compression = require("compression");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -42,6 +43,15 @@ gulp.task('js', function() {
 gulp.task("server", function () {
   server.init({
     server: "build/",
+    middleware: [
+      require("compression")(), // global
+      {
+          route: "/api", // per-route
+          handle: function (req, res, next) {
+              // handle any requests at /api
+          }
+      }
+    ],
     notify: false,
     open: true,
     cors: true,
