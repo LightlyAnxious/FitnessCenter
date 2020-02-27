@@ -58,6 +58,7 @@
   & p {
     @include roboto-l;
 
+    width: 98%;
     margin: 0 0 9px 0;
 
     font-weight: 300;
@@ -207,6 +208,10 @@
     width: 512px;
 
     text-align: center;
+
+    & p {
+      width: auto;
+    }
 
     & span {
       display: none;

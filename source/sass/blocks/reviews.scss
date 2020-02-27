@@ -11,7 +11,7 @@
   & h2 {
     @include bebas-b;
 
-    margin: 118px 0 52px 0;
+    margin: 120px 0 52px 0;
 
     font-size: 49px;
     line-height: 49px;
@@ -69,7 +69,7 @@
     display: inline-block;
     vertical-align: top;
 
-    margin: 62px 24px 100px 62px;
+    margin: 62px 24px 100px 61px;
   }
 
   & blockquote {
@@ -92,7 +92,7 @@
 
   & p {
     display: inline-block;
-    margin: 0 0 46px;
+    margin: 0 0 44px;
     width: 100%;
   }
 }
@@ -110,7 +110,7 @@
     }
 
     & cite {
-      margin-bottom: 13px;
+      margin-bottom: 11px;
     }
   }
 
@@ -129,6 +129,10 @@
   .reviews__item {
     width: 100%;
     max-width: unset;
+
+    & img {
+      margin-left: 64px;
+    }
 
     & p {
       width: 99%;
@@ -199,6 +203,8 @@
 
     & p {
       width: 100%;
+
+      line-height: 140%;
     }
   }
 }

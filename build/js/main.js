@@ -37,7 +37,7 @@
         768: {
           slidesPerView: 2,
           slidesPerGroup: 2,
-          spaceBetween: 26,
+          spaceBetween: 30,
           initialSlide: 2,
           setWrapperSize: false,
           cssWidthAndHeight: true,

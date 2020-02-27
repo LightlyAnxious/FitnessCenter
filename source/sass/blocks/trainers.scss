@@ -33,7 +33,6 @@
 }
 
 .trainers__gallery {
-  display: block;
   width: 90.75%;
 
   overflow: hidden;
@@ -44,7 +43,7 @@
 .trainers__list {
   @include list-reset;
 
-  display: block;
+  display: flex;
   width: 100%;
 
   letter-spacing: 0;
@@ -58,18 +57,8 @@
   width: 260px;
   height: 294px;
   margin-right: 3.44%;
-  margin-left: -0.37%;
   overflow: hidden;
   box-sizing: border-box;
-
-  &:first-of-type {
-    margin-left: 0;
-  }
-
-  &:nth-of-type(4n),
-  &:last-of-type {
-    margin-right: 0;
-  }
 
   & p {
     @include roboto-b;
@@ -217,13 +206,12 @@
   }
 
   .trainers__gallery {
-    width: 571px;
+    width: 566px;
+    height: 294px;
   }
 
   .trainers__item {
     width: 268px;
-    margin-right: 5.3%;
-    margin-left: 0;
 
     & p {
       left: 51%;
@@ -268,6 +256,7 @@
 
   .trainers__gallery {
     width: 226px;
+    height: 274px;
   }
 
   .trainers__list {
@@ -279,7 +268,7 @@
     display: inline-block;
     width: 226px;
     height: 274px;
-    margin: 0 0 0 -0.28%;
+    margin: 0;
 
     &:first-of-type {
       margin-left: 0;

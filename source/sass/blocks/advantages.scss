@@ -120,10 +120,6 @@
     display: none;
   }
 
-  // background: linear-gradient(140deg, #d10a42 5%, #0041ca 45%);
-  // background-clip: text;
-  // -webkit-text-fill-color: transparent;
-
   & strong {
     @include roboto-b;
 
@@ -326,13 +322,13 @@
     &--space {
       width: 89px;
       height: 71px;
-      margin: 7px 29px 5px 0;
+      margin: 0 29px 5px 0;
     }
 
     &--parking {
       width: 59px;
       height: 71px;
-      margin: 8px 29px 0 auto;
+      margin: 0 29px 0 auto;
     }
 
     &--gym {
@@ -355,11 +351,11 @@
     &--comfort {
       width: 89px;
       height: 71px;
-      margin: 13px 29px 20px 0;
+      margin: 13px 29px 16px 0;
     }
 
     &--experience {
-      margin: 13px 32px 20px auto;
+      margin: 13px 32px 16px auto;
       width: 57px;
       height: 71px;
     }
@@ -408,7 +404,7 @@
     min-height: unset;
 
     & h2 {
-      margin: 72px auto 52px auto;
+      margin: 71px auto 46px auto;
 
       font-size: 32px;
       line-height: 32px;
@@ -437,7 +433,7 @@
     &--gym {
       order: 2;
       width: 100%;
-      margin: 0 0 50px;
+      margin: 0 0 43px;
     }
 
     &--comfort {
@@ -471,13 +467,13 @@
     &--space {
       width: 89px;
       height: 71px;
-      margin: 0 0 10px;
+      margin: 0 0 8px;
     }
 
     &--parking {
       width: 59px;
       height: 71px;
-      margin: 0 0 10px;
+      margin: 0 0 8px;
     }
 
     &--gym {
@@ -497,19 +493,19 @@
       width: 89px;
       height: 71px;
       align-self: center;
-      margin: 0 0 13px;
+      margin: 0 0 9px;
     }
 
     &--experience {
       width: 57px;
       height: 71px;
       align-self: center;
-      margin: 0 0 10px;
+      margin: 0 0 9px;
     }
   }
 
   .advantages__desc {
-    margin-bottom: 28px;
+    margin-bottom: 19px;
 
     text-align: center;
 
@@ -525,7 +521,7 @@
     }
 
     &--gym {
-      margin-bottom: 15px;
+      margin-bottom: 14px;
 
       text-align: center;
 
@@ -537,7 +533,7 @@
     &--comfort {
       align-self: center;
       width: 187px;
-      margin: 0 0 30px 0;
+      margin: 0 0 21px;
     }
 
     &--experience {
