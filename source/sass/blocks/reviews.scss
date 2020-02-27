@@ -36,23 +36,22 @@
   @include roboto-r;
 
   width: 560px;
-  display: inline-block;
+  display: flex;
+  align-items: stretch;
 
   color: #ffffff;
   font-size: 16px;
-  line-height: 140%;
-  white-space: nowrap;
+  line-height: 145%;
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
 }
 
 .reviews__item {
   position: relative;
 
-  display: inline-block;
   vertical-align: middle;
   width: 100%;
   max-width: 560px;
-  margin-left: -0.4%;
+  flex-grow: 1;
   min-height: 242px;
   white-space: normal;
 
@@ -93,7 +92,7 @@
 
   & p {
     display: inline-block;
-    margin: 0 0 52px;
+    margin: 0 0 46px;
     width: 100%;
   }
 }

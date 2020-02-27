@@ -68,11 +68,6 @@
       initialSlide: 0,
       slidesPerGroup: 1,
       spaceBetween: 0,
-      cssWidthAndHeight: true,
-      autoResize: false,
-      visibilityFullFit: true,
-      setWrapperSize: true,
-      lazy: true,
     });
   }
 

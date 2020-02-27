@@ -17,7 +17,6 @@ var include = require("posthtml-include");
 var del = require("del");
 var uglify = require("gulp-uglify");
 var concat = require("gulp-concat");
-var compression = require("compression");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -34,7 +33,7 @@ gulp.task("css", function () {
 
 gulp.task('js', function() {
   return gulp.src(["source/js/vendor.js", "source/js/main.js"])
-    .pipe(concat('main.js'))
+    // .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('build/js'));
@@ -44,7 +43,7 @@ gulp.task("server", function () {
   server.init({
     server: "build/",
     middleware: [
-      require("compression")(), // global
+      require("compression")(),
       {
           route: "/api", // per-route
           handle: function (req, res, next) {
@@ -75,7 +74,7 @@ gulp.task("images", function() {
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
-      imagemin.svgo()
+      // imagemin.svgo()
     ]))
 
     .pipe(gulp.dest("build/img"));
@@ -119,5 +118,5 @@ gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "images", "copy", "css", "js", "html"));
+gulp.task("build", gulp.series("clean", "sprite", "images", "copy", "css", "js", "html"));
 gulp.task("start", gulp.series("css", "server"));

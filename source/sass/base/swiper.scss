@@ -75,15 +75,15 @@
   scroll-snap-type: y mandatory;
 }
 
-.swiper-container {
-  display: flex;
-  align-items: start;
+.swiper-slide {
+  flex-grow: 1;
+  height: auto;
 }
 
 @media (max-width: $tablet-width) {
   .swiper-slide {
     max-width: 268px;
-    max-height: 294px;
+    flex-grow: 1;
   }
 }
 
