@@ -16,6 +16,7 @@ var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
 var uglify = require("gulp-uglify");
+var concat = require("gulp-concat");
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -32,6 +33,7 @@ gulp.task("css", function () {
 
 gulp.task('js', function() {
   return gulp.src(["source/js/vendor.js", "source/js/main.js"])
+    .pipe(concat('main.js'))
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('build/js'));
