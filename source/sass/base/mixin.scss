@@ -17,7 +17,7 @@
   display: inline-block;
   box-sizing: border-box;
 
-  font-family: "Roboto Condensed Bold", "Helvetica CY", sans-serif;
+  font-family: "Roboto Condensed", "Helvetica CY", sans-serif;
   font-weight: bold;
   font-size: 12px;
   line-height: 14px;
@@ -30,20 +30,25 @@
 
 @mixin roboto-r {
   font-family: "Roboto Condensed", "Helvetica CY", sans-serif;
+  font-weight: 400;
 }
 
 @mixin roboto-b {
-  font-family: "Roboto Condensed Bold", "Helvetica CY", sans-serif;
+  font-family: "Roboto Condensed", "Helvetica CY", sans-serif;
+  font-weight: 600;
 }
 
 @mixin roboto-l {
-  font-family: "Roboto Condensed Light", "Helvetica CY", sans-serif;
+  font-family: "Roboto Condensed", "Helvetica CY", sans-serif;
+  font-weight: 300;
 }
 
 @mixin bebas-r {
   font-family: "BebasNeue", "Tahoma", sans-serif;
+  font-weight: 400;
 }
 
 @mixin bebas-b {
-  font-family: "BebasNeue Bold", "Tahoma", sans-serif;
+  font-family: "BebasNeue", "Tahoma", sans-serif;
+  font-weight: 600;
 }
