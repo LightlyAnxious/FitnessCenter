@@ -9,7 +9,7 @@
     "compression": "^1.7.4",
     "eslint": "4.16.0",
     "eslint-config-htmlacademy": "0.4.x",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "gulp": "4.0.x",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^3.0.1",
